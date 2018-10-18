@@ -1,52 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <!--[if IE]>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <![endif]-->
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
-	  <!-- page title -->
-      <title>CAREPET</title>
-	   <!--[if lt IE 9]>
-      <script src="js/respond.js"></script>
-      <![endif]-->
-	  <!-- Font files -->
-	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CQuicksand:400,500,700" rel="stylesheet">
-      <link href="{{ URL::asset('carepet/fonts/flaticon/flaticon.html') }}" rel="stylesheet" type="text/css">
-      <link href="{{ URL::asset('carepet/fonts/fontawesome/fontawesome-all.min.html') }}" rel="stylesheet" type="text/css">
-	  <!-- Fav icons -->
-      <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('carepet/apple-icon-57x57.html') }}">
-      <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('carepet/apple-icon-72x72.html') }}">
-      <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('carepet/apple-icon-114x114.html') }}">
-      <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('carepet/favicon.html') }}">
-      <!-- Bootstrap core CSS -->
-      <link href="{{ URL::asset('carepet/vendor/bootstrap/css/bootstrap.min.html') }}" rel="stylesheet">
-      <!-- style CSS -->
-      <link href="{{ URL::asset('carepet/css/style.html') }}" rel="stylesheet">
-      <!-- plugins CSS -->
-      <link href="{{ URL::asset('carepet/css/plugins.html') }}" rel="stylesheet">
-      <!-- Colors CSS -->
-      <link href="{{ URL::asset('carepet/styles/maincolors.html') }}" rel="stylesheet">
-      <!-- LayerSlider CSS -->
-      <link rel="stylesheet" href="{{ URL::asset('carepet/vendor/layerslider/css/layerslider.html') }}">
-	   <!-- Switcher Only -->
-	<link rel="stylesheet" id="switcher-css" type="text/css" href="{{ URL::asset('carepet/switcher/css/switcher.html') }}" media="all" />
-	<!-- END Switcher Styles -->
+@extends('layouts.navbar')
 
-	<!-- Demo Examples (For Module #3) -->
-	<link rel="alternate stylesheet" type="text/css" href="{{ URL::asset('carepet/styles/agility.html') }}" title="agility" media="all" />
-	<link rel="alternate stylesheet" type="text/css" href="{{ URL::asset('carepet/styles/dogwalker.html') }}" title="dogwalker" media="all" />
-	<link rel="alternate stylesheet" type="text/css" href="{{ URL::asset('carepet/styles/maincolors.html') }}" title="maincolors" media="all" />
-	<link rel="alternate stylesheet" type="text/css" href="{{ URL::asset('carepet/styles/pethotel.html') }}" title="pethotel" media="all" />
-	<link rel="alternate stylesheet" type="text/css" href="{{ URL::asset('carepet/styles/petshop.html') }}" title="petshop" media="all" />
-	<link rel="alternate stylesheet" type="text/css" href="{{ URL::asset('carepet/styles/vetclinic.html') }}" title="vetclinic" media="all" />
-	<!-- END Demo Examples -->
-   </head>
-   <body id="top">
-   <div id="preloader">
+@section('maincontent')
+<div>
+	   <!-- <div class="demo-icon">
+		  <i class="fa fa-cog fa-spin fa-2x"></i>
+	   </div> -->
+	   <!-- end opener icon -->
+	   <div class="form_holder text-center">
+		  <div class="row">
+			 <div class="col-lg-12">
+				<div class="predefined_styles">
+				 <h4>Template Options</h4>
+				 <hr>
+				   <p>Choose a Color Skin</p>
+				   <!-- MODULE #3 -->
+				    <div class="col-lg-12">
+				   <a href="agility.html" class="styleswitch"><img src="switcher/images/agility.html" alt="Agility"></a>		
+				   <a href="pethotel.html" class="styleswitch"><img src="switcher/images/pethotel.html" alt="Pet Hotel"></a>		
+				   <a href="petshop.html" class="styleswitch"><img src="switcher/images/petshop.html" alt="Pet Shop"></a>		
+				   </div>
+				    <div class="col-lg-12">
+				   <a href="dogwalker.html" class="styleswitch"><img src="switcher/images/dogwalker.html" alt="Dog walker"></a>	
+                    <a href="vetclinic.html" class="styleswitch"><img src="switcher/images/vetclinic.html" alt="Vet Clinic"></a>				   
+				   <a href="maincolors.html" class="styleswitch"><img src="switcher/images/maincolors.html" alt="Main Colors"></a>
+                   </div>				   
+				   <!-- END MODULE #3 -->
+				</div>
+				<!-- end predefined_styles -->
+				<p>Change Home Header</p>
+				<select id="headers" class="show-menu-arrow selectpicker" onchange="document.location = this.value">
+				   <option value="">Select</option>
+				   <option value="index2.html">Video Header</option>
+				   <option value="index.html">Layerslider Header</option>
+				</select>
+				<p>Layout</p>
+					<a href="index_boxed.html" class="btn btn-primary btn-sm">Boxed</a>
+				<a href="index.html" class="btn btn-primary btn-sm">Full Width</a>
+			 </div>
+			 <!-- end col -->
+		  </div>
+		  <!-- end row -->
+	   </div>
+	   <!-- end form_holder -->
+	</div>
+	<!-- end demo_changer -->
+	<!-- End Switcher -->
+      <!-- Preloader -->
+      <div id="preloader">
          <div class="spinner">
             <div class="bounce1"></div>
          </div>
@@ -62,8 +62,8 @@
                      <div class="col-md-12">
                         <!-- Start Contact Info -->
                         <ul class="contact-details float-left">
-                           <li><i class="fa fa-map-marker"></i>Keputih, Sukolilo, Kota SBY, Jawa Timur</li>
-                           <li><i class="fa fa-envelope"></i><a href="mailto:email@site.com">carepet@yoursite.com</a></li>
+                           <li><i class="fa fa-map-marker"></i>Pet Street 123 - New York</li>
+                           <li><i class="fa fa-envelope"></i><a href="mailto:email@site.com">email@yoursite.com</a></li>
                            <li><i class="fa fa-phone"></i>(123) 456-789</li>
                         </ul>
                         <!-- End Contact Info -->
@@ -87,7 +87,7 @@
                <div class="container ">
 			     <!-- logo -->
                   <a class="navbar-brand" href="index.html">
-					  <i class="flaticon-dog-20"></i><span>CAREPET!</span>
+					  <i class="flaticon-dog-20"></i><span>Woof!</span>
 				  </a>
                  <!-- Navbartoggler -->
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -177,79 +177,50 @@
          </div>
 		  <!--/row -->
       </nav>
+	   <!-- /nav --><!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid overlay">
+   <div class="jumbo-heading">
+      <!-- section-heading -->
+      <div class="section-heading" data-aos="zoom-in">
+         <h1>Our Services</h1>
+      </div>
+      <!-- /section-heading -->
+      <!-- Breadcrumbs -->
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Services 1</li>
+         </ol>
+      </nav>
+      <!-- /nav -->
+   </div>
+   <!-- /jumbo-heading -->
+</div>
+<!-- /jumbotron -->
+<!-- ==== Page Content ==== -->
+<div class="page">
+	<div class="container">
+   <div class="container block-padding pt-0">
+      <div class="row">
+         <div class="col-xl-6">
+            <h3>The best for your pet!</h3>
+            <p>Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
+            <p><strong>Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.</strong></p>
+            <!-- ul custom-->
+            <ul class="custom pl-0">
+               <li>Aliquam erat volut pat.</li>
+               <li>Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac.</li>
+               <li>Aliquam erat volut pat phas ellu</li>
+            </ul>
+         </div>
+         <!-- /col-xl-->
+         <div class="col-xl-6">
+            <img src="img/services2.html" alt=""   data-aos="fade-down"  data-aos-duration="1500"  class="img-fluid border-irregular1 border-double">
+         </div>
+      </div>
+      <!-- /row -->
+   </div>
+   <!-- /container -->
 
-		@yield('maincontent')
-
-	  <footer class="text-light">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<a class="navbar-brand" href="index.html"><i class="flaticon-dog-20"></i><span>Woof!</span></a>
-					<p class="mt-3">Cras enim wisi elit aenean, amet eros curabitur. Wisi ad eget ipsum metus sociis Cras enim wisi elit aenean.</p>
-				</div>
-				<!--/ col-lg -->
-				<div class="col-lg-3">
-					<h6><i class="fas fa-envelope margin-icon"></i>Contact Us</h6>
-					<ul class="list-unstyled">
-					<li>(123) 456-789</li>
-					<li><a href="mailto:email@yoursite.com">email@yoursite.com</a></li>
-					<li>Pet Street 123 - New York </li>
-					</ul>
-					<!--/ul -->
-				</div>
-				<!--/ col-lg -->
-				<div class="col-lg-3">
-					<h6><i class="far fa-clock margin-icon"></i>Working Hours</h6>
-					<ul class="list-unstyled">
-					<li>Open 9am - 10pm</li>
-					<li>Holidays - Closed</li>
-					<li>Weekends - Closed</li>
-					</ul>
-					<!--/ul -->
-				</div>
-				<!--/ col-lg -->
-			</div>
-			<!--/ row-->
-			<div class="row">
-				<div class="credits col-sm-12">
-					<p>Copyright 2018 / Designed by <a href="http://www.ingridkuhn.com/">Ingrid Kuhn</a></p>
-				</div>
-			</div>
-			<!--/ row -->
-		</div>
-		<!--/ container -->
-		<!-- Go To Top Link -->
-		<div class="page-scroll hidden-sm hidden-xs">
-			<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-		</div>
-		<!--/page-scroll-->
-		</footer>
-
-		<script src="{{ URL::asset('carepet/vendor/jquery/jquery.min.html') }}"></script>
-		<script src="{{ URL::asset('carepet/vendor/bootstrap/js/bootstrap.min.html') }}"></script>
-		<!-- Custom Js -->
-		<script src="{{ URL::asset('carepet/js/custom.html') }}"></script>
-		<script src="{{ URL::asset('carepet/js/plugins.html') }}"></script>
-		<!-- Prefix free -->
-		<script src="{{ URL::asset('carepet/js/prefixfree.min.html') }}"></script>
-		<!-- Bootstrap Select Tool (For Module #4) -->
-		<script src="{{ URL::asset('carepet/switcher/js/bootstrap-select.html') }}"></script>
-		<!-- All Scripts & Plugins -->
-		<script src="{{ URL::asset('carepet/switcher/js/dmss.html') }}"></script>	
-   </body>
-</html>
-
-<script src="{{ URL::asset('carepet/vendor/layerslider/js/greensock.html') }}"></script>
-<!-- LayerSlider script files -->
-<script src="{{ URL::asset('carepet/vendor/layerslider/js/layerslider.transitions.html') }}"></script>
-<script src="{{ URL::asset('carepet/vendor/layerslider/js/layerslider.kreaturamedia.jquery.html') }}"></script>
-<script src="{{ URL::asset('carepet/vendor/layerslider/js/layerslider.load.html') }}"></script>
-<!-- Google maps -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script src="{{ URL::asset('carepet/js/map.html') }}"></script>
-<!-- Mailchimp script -->
-<script src="{{ URL::asset('carepet/js/mailchimp.html') }}"></script>
-<!-- number counter script -->
-<script src="{{ URL::asset('carepet/js/counter.html') }}"></script>
-<!-- Contact Form script -->
-<script src="{{ URL::asset('carepet/js/contact.html') }}"></script>
+    
+@endsetion

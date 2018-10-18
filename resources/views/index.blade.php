@@ -83,7 +83,13 @@
    </div>
    <!-- ls-slide -->
 </div>
+   
 <section id="services" class="cat-bg3">
+   <div class="container">
+      <div class="section-heading text-center">
+         <h2>Our Services</h2>
+      </div>
+   
    <!-- services carousel -->
    <div class="bg-light-custom block-padding border-irregular1">
       <div id="owl-services" class="container owl-carousel owl-theme">
@@ -196,4 +202,9 @@
    <!-- /bg-light-custom -->   </div>
    <!-- /container -->
 </section>
+<!-- / Section Ends -->
+
+    
+            <div style="display: none;" id="map-canvas"></div>
+   
 @endsection
