@@ -86,7 +86,7 @@
             <div class="navbar container-fluid">
                <div class="container ">
 			     <!-- logo -->
-                  <a class="navbar-brand" href="index.html">
+                  <a class="navbar-brand" href="{{ url('/index') }}">
 					  <i class="flaticon-dog-20"></i><span>CAREPET!</span>
 				  </a>
                  <!-- Navbartoggler -->
@@ -97,74 +97,35 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarResponsive">
                      <ul class="navbar-nav ml-auto">
-					  <!-- menu item -->
-                        <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home
-                           </a>
-                        </li>
 						  <!-- menu item -->
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="services-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Services
                            </a>
                            <div class="dropdown-menu" aria-labelledby="services-dropdown">
-                              <a class="dropdown-item" href="services.html">Services Style 1</a>
-                              <a class="dropdown-item" href="services2.html">Services Style 2</a>
-                              <a class="dropdown-item" href="services-single.html">Services Single</a>
+                              <a class="dropdown-item" href="{{ url('/petshop') }}">Pet Shop</a>
+                              <a class="dropdown-item" href="services2.html">Pet Care</a>
+                              <a class="dropdown-item" href="services-single.html">Vet Consultation</a>
+							                <a class="dropdown-item" href="services-single.html">Send Pet</a>
                            </div>
                         </li>
 						  <!-- menu item -->
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="about-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           About
-                           </a>
-                           <div class="dropdown-menu" aria-labelledby="about-dropdown">
-                              <a class="dropdown-item" href="about.html">About Style 1</a>
-                              <a class="dropdown-item" href="about2.html">About Style 2</a>
-                           </div>
-                        </li>					
+                        					
+						  
 						  <!-- menu item -->
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="adopt-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Adopt
+						            <li class="nav-item">
+                           <a class="nav-link" href="{{ url('/contact') }}">Contact
                            </a>
-                           <div class="dropdown-menu" aria-labelledby="adopt-dropdown">
-                              <a class="dropdown-item" href="adoption.html">Adoption Gallery</a>
-                              <a class="dropdown-item" href="adoption-single.html">Adoption Single Page</a>
-                           </div>
-                        </li>
-						  <!-- menu item -->
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="gallery-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Gallery
-                           </a>
-                           <div class="dropdown-menu" aria-labelledby="gallery-dropdown">
-                              <a class="dropdown-item" href="gallery.html">Gallery Style 1</a>
-                              <a class="dropdown-item" href="gallery2.html">Gallery Style 2</a>
-                           </div>
-                        </li>
-						  <!-- menu item -->
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="contact-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Contact
-                           </a>
-                           <div class="dropdown-menu" aria-labelledby="contact-dropdown">
-                              <a class="dropdown-item" href="contact.html">Contact Style 1</a>
-                              <a class="dropdown-item" href="contact2.html">Contact Style 2</a>
-                           </div>
                         </li>
 						 <!-- menu item -->
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="others-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Other pages
+                      <li class="nav-item">
+                           <a class="nav-link " href="{{ url('/about') }}" id="about-dropdown"  aria-haspopup="true" aria-expanded="false">
+                           About
                            </a>
-                           <div class="dropdown-menu" aria-labelledby="others-dropdown">
-                              <a class="dropdown-item" href="team.html">Our Team</a>
-                              <a class="dropdown-item" href="blog.html">Blog Home</a>
-                              <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-							  <a class="dropdown-item" href="elements.html">Elements Page</a>
-							  <a class="dropdown-item" href="404.html">404 Page</a>
-                           </div>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ url('/login') }}">Login
+                           </a>
                         </li>
                      </ul>
 					 <!--/ul -->
@@ -184,7 +145,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<a class="navbar-brand" href="index.html"><i class="flaticon-dog-20"></i><span>Woof!</span></a>
+					<a class="navbar-brand" href="index.html"><i class="flaticon-dog-20"></i><span>CarePet!</span></a>
 					<p class="mt-3">Cras enim wisi elit aenean, amet eros curabitur. Wisi ad eget ipsum metus sociis Cras enim wisi elit aenean.</p>
 				</div>
 				<!--/ col-lg -->

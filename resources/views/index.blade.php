@@ -102,9 +102,9 @@
                </div>
                <!-- service content -->
                <div class="service-content">
-                  <h6>Fun Activities</h6>
+                  <h6>Vet Shop</h6>
                   <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                     Kamu bisa membelikan apapun untuk hewan kesayanganmu.
                   </p>
                   <a class="btn btn-primary" href="services-single.html">read more</a>
                </div>
@@ -119,31 +119,15 @@
                </div>
                <!-- service content -->
                <div class="service-content">
-                  <h6>Pet Hotel</h6>
+                  <h6>Vet Care</h6>
                   <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                     Kamu bisa menitipkan dan juga melakukan perawatan untuk hewan kesayanganmu.
                   </p>
                   <a class="btn btn-primary" href="services-single.html">read more</a>
                </div>
             </div>
          </div>
-         <!-- service 3  -->
-         <div class="col-md-12">
-            <div class="serviceBox">
-               <!-- service icon -->
-               <div class="service-icon">
-                  <i class="flaticon-animals-2"></i>
-               </div>
-               <!-- service content -->
-               <div class="service-content">
-                  <h6>Grooming Services</h6>
-                  <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
-                  </p>
-                  <a class="btn btn-primary" href="services-single.html">read more</a>
-               </div>
-            </div>
-         </div>
+         
          <!-- service 4 -->
          <div class="col-md-12">
             <div class="serviceBox">
@@ -153,9 +137,25 @@
                </div>
                <!-- service content -->
                <div class="service-content">
-                  <h6>Veterinary 24/7</h6>
+                  <h6>Vet Consultation</h6>
                   <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                     Kamu bisa sharing hal apapun tentang hewan kesayanganmu ke dokter hewan kami.
+                  </p>
+                  <a class="btn btn-primary" href="services-single.html">read more</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="serviceBox">
+               <!-- service icon -->
+               <div class="service-icon">
+                  <i class="flaticon-dog-training-3"></i>
+               </div>
+               <!-- service content -->
+               <div class="service-content">
+                  <h6>Send Pet</h6>
+                  <p>
+                     Kamu bisa mengantarkan hewan peliharaanmu kemanapun kamu inginkan.
                   </p>
                   <a class="btn btn-primary" href="services-single.html">read more</a>
                </div>
@@ -165,36 +165,19 @@
          <div class="col-md-12">
             <div class="serviceBox">
                <!-- service icon -->
-               <div class="service-icon">
-                  <i class="flaticon-syringe"></i>
-               </div>
+               
                <!-- service content -->
                <div class="service-content">
-                  <h6>Vaccines</h6>
+                  <h6></h6>
                   <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
+                     
                   </p>
-                  <a class="btn btn-primary" href="services-single.html">read more</a>
+                  
                </div>
             </div>
          </div>
          <!-- service 6 -->
-         <div class="col-md-12">
-            <div class="serviceBox">
-               <!-- service icon -->
-               <div class="service-icon">
-                  <i class="flaticon-dog-training-3"></i>
-               </div>
-               <!-- service content -->
-               <div class="service-content">
-                  <h6>Training</h6>
-                  <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum malesuada.
-                  </p>
-                  <a class="btn btn-primary" href="services-single.html">read more</a>
-               </div>
-            </div>
-         </div>
+         
          <!--col-md-12  -->
       </div>
       <!-- /owl-services -->
@@ -202,9 +185,133 @@
    <!-- /bg-light-custom -->   </div>
    <!-- /container -->
 </section>
+<section id="adopt" class="paws-house-bg1 bg-light">
+   <div class="container ">
+      <div class="section-heading text-center">
+         <h2>Adopt a Pet</h2>
+      </div>
+      <!-- /Section-heading -->
+      <div class="col-lg-10 offset-lg-1 text-center">
+         <h3>Find a new furry Friend</h3>
+      </div>
+       <!-- First row: Adopt a pet -->
+      <div class="row mt-5">
+         <!-- Pet  -->
+         <div class="adopt-card col-md-6 col-xl-3 res-margin">
+            <div class="card bg-light-custom">
+               <div class="thumbnail text-center">
+                  <!-- Image -->
+                  <img src="{{ URL::asset('carepet/img/adoption/adoption1.html') }}" class="border-irregular1 img-fluid" alt="">
+                  <!-- Name -->
+                  <div class="caption-adoption">
+                     <h6 class="adoption-header">Fluffy</h6>
+                     <!-- List -->
+                     <ul class="list-unstyled">
+                        <li><strong>Gender:</strong> Female</li>
+                        <li><strong>Neutered: </strong> Yes</li>
+                        <li><strong>Age:</strong> 2 years</li>
+                     </ul>
+                     <!-- Buttons -->								  
+                     <div class="text-center">
+                        <a href="adoption-single.html" class="btn btn-primary">More Info</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- /thumbnail -->
+            </div>
+            <!-- /card -->
+         </div>
+         <!-- /adopt-card -->
+         <!-- /pet -->
+         <!-- Pet  -->
+         <div class="adopt-card col-md-6 col-xl-3 res-margin">
+            <div class="card bg-light-custom">
+               <div class="thumbnail text-center">
+                  <!-- Image -->
+                  <img src="{{ URL::asset('carepet/img/adoption/adoption2.html') }}" class="border-irregular1 img-fluid" alt="">
+                  <!-- Name -->
+                  <div class="caption-adoption">
+                     <h6 class="adoption-header">Charlie</h6>
+                     <!-- List -->
+                     <ul class="list-unstyled">
+                        <li><strong>Gender:</strong> Male</li>
+                        <li><strong>Neutered: </strong> Yes</li>
+                        <li><strong>Age:</strong> 2 years</li>
+                     </ul>
+                     <!-- Buttons -->								  
+                     <div class="text-center">
+                        <a href="adoption-single.html" class="btn btn-primary">More Info</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- /thumbnail -->
+            </div>
+            <!-- /card -->
+         </div>
+         <!-- /adopt-card -->
+         <!-- /pet -->
+         <!-- Pet  -->
+         <div class="adopt-card col-md-6 col-xl-3 res-margin">
+            <div class="card bg-light-custom">
+               <div class="thumbnail text-center">
+                  <!-- Image -->
+                  <img src="{{ URL::asset('carepet/img/adoption/adoption3.html') }}" class="border-irregular1 img-fluid" alt="">
+                  <!-- Name -->
+                  <div class="caption-adoption">
+                     <h6 class="adoption-header">Lucky</h6>
+                     <!-- List -->
+                     <ul class="list-unstyled">
+                        <li><strong>Gender:</strong> Male</li>
+                        <li><strong>Neutered: </strong> Yes</li>
+                        <li><strong>Age:</strong> 5 years</li>
+                     </ul>
+                     <!-- Buttons -->								  
+                     <div class="text-center">
+                        <a href="adoption-single.html" class="btn btn-primary">More Info</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- /thumbnail -->
+            </div>
+            <!-- /card -->
+         </div>
+         <!-- /adopt-card -->
+         <!-- /pet -->
+         <!-- Pet  -->
+         <div class="adopt-card col-md-6 col-xl-3 res-margin">
+            <div class="card bg-light-custom">
+               <div class="thumbnail text-center">
+                  <!-- Image -->
+                  <img src="{{ URL::asset('carepet/img/adoption/adoption4.html') }}" class="border-irregular1 img-fluid" alt="">
+                  <!-- Name -->
+                  <div class="caption-adoption">
+                     <h6 class="adoption-header">Magdalene</h6>
+                     <!-- List -->
+                     <ul class="list-unstyled">
+                        <li><strong>Gender:</strong> Female</li>
+                        <li><strong>Neutered: </strong> No</li>
+                        <li><strong>Age:</strong> 2 years</li>
+                     </ul>
+                     <!-- Buttons -->								  
+                     <div class="text-center">
+                        <a href="{{ url('/petshop') }}" class="btn btn-primary">More Info</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- /thumbnail -->
+            </div>
+            <!-- /card -->
+         </div>
+         <!-- /adopt-card -->
+         <!-- /pet -->
+      </div>
+      <!-- /row -->      <div class="text-center mt-5">
+         <a href="adoption.html" class="btn btn-secondary btn-lg">See more pets</a>
+      </div>
+   </div>
+   <!-- /container -->
+</section>
 <!-- / Section Ends -->
-
-    
             <div style="display: none;" id="map-canvas"></div>
    
 @endsection
