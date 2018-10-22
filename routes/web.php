@@ -24,3 +24,6 @@ Route::get('/shop-detail', 'HomeController@shopdetail');
 Route::get('/shop-checkout', 'HomeController@shopcheckout');
 Route::get('/shop-chart', 'HomeController@shopchart');
 Route::get('/vets', 'HomeController@vets');
+Route::get('/contact', 'HomeController@contact');
+Route::get('/service', 'HomeController@service');
+Route::get('/blog', 'HomeController@blog');

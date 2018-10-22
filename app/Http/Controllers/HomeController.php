@@ -55,4 +55,19 @@ class HomeController extends Controller
     {
         return view('vet-consultation');
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function service()
+    {
+        return view('service');
+    }
+
+    public function blog()
+    {
+        return view('blog');
+    }
 }
