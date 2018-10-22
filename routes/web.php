@@ -19,7 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/index', 'HomeController@show');
-Route::get('/contact', 'HomeController@contact');
-Route::get('/vetconsultation', 'HomeController@consultation');
-Route::get('/petshop', 'HomeController@petshop');
-Route::get('/about', 'HomeController@about');
+Route::get('/shop', 'HomeController@shop');
+Route::get('/shop-detail', 'HomeController@shopdetail');
+Route::get('/shop-checkout', 'HomeController@shopcheckout');
+Route::get('/shop-chart', 'HomeController@shopchart');
+Route::get('/vets', 'HomeController@vets');
