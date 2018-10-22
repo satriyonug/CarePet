@@ -32,33 +32,33 @@
 <section class="section white">
 	<div class="container">
 	<div class="general-title text-center">
-	<h4>Clinic Deparments</h4>
+	<h4>CarePet Services</h4>
 	<hr>
 	<p class="lead">Listed below four reasons to choose us!</p>
 	</div>
 	<div class="row module-wrapper text-left service-style-2">
 	<div class="col-md-6 col-sm-6 why-us wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
 	<img class="img-responsive img-circle alignleft" src="{{ URL::asset('petvet/upload/xservice_05.png.pagespeed.ic.Of6gTG40A_.png') }}" alt="">
-	<strong>Surgical Operations</strong>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus rabitur euismod enim a metus aadipiscing aliquam. </p>
+	<strong>Pet Care</strong>
+	<p>Kamu bisa menitipkan dan merawat hewan peliharaan kesayanganmu ketika kamu sedang sibuk. </p>
 	<a href="#" class="readmore">Read more</a>
 	</div>
 	<div class="col-md-6 col-sm-6 why-us wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
 	<img class="img-responsive img-circle alignleft" src="{{ URL::asset('petvet/upload/xservice_06.png.pagespeed.ic.4BHvcxtzN3.png') }}" alt="">
-	<strong>Patient Department</strong>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus rabitur euismod enim a metus aadipiscing aliquam. </p>
+	<strong>Send Pet</strong>
+	<p>Kamu bisa mengirim hewan peliharaan kesayanganmu kemanapun dan kesiapapun sesuai yang kamu inginkan dengan cepat. </p>
 	<a href="#" class="readmore">Read more</a>
 	</div>
 	<div class="col-md-6 col-sm-6 why-us  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
 	<img class="img-responsive img-circle alignleft" src="{{ URL::asset('petvet/upload/xservice_07.png.pagespeed.ic.nmzGaaaTBj.png') }}" alt="">
-	<strong>Laboratory Services</strong>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus rabitur euismod enim a metus aadipiscing aliquam. </p>
+	<strong>Pet Shop</strong>
+	<p>Kamu bisa membelikan apapun untuk hewan peliharaan kesayanganmu. </p>
 	<a href="#" class="readmore">Read more</a>
 	</div>
 	<div class="col-md-6 col-sm-6 why-us  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
 	<img class="img-responsive img-circle alignleft" src="{{ URL::asset('petvet/upload/xservice_08.png.pagespeed.ic.2nnaazxIsB.png') }}" alt="">
-	<strong>Pet Barber Service</strong>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus rabitur euismod enim a metus aadipiscing aliquam. </p>
+	<strong>Vet Consultation</strong>
+	<p>Kamu bisa cerita apapun tentang hewa peliharaan kesayanganmu ke dokter hewan kami. </p>
 	<a href="#" class="readmore">Read more</a>
 	</div>
 	</div>

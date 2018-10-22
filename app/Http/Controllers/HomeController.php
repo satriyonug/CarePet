@@ -64,5 +64,24 @@ class HomeController extends Controller
     public function petcaredetail()
     {
         return view('petcare-detail');
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function service()
+    {
+        return view('service');
+    }
+
+    public function blog()
+    {
+        return view('blog');
+    }
+
+    public function signin()
+    {
+        return view('sign-in');
     }
 }
