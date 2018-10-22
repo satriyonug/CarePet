@@ -64,7 +64,8 @@ class HomeController extends Controller
     public function petcaredetail()
     {
         return view('petcare-detail');
-
+    }
+    
     public function contact()
     {
         return view('contact');
