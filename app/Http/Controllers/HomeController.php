@@ -31,23 +31,28 @@ class HomeController extends Controller
         return view('index');
     }
 
-    public function contact()
+    public function shop()
     {
-        return view('contact');
+        return view('shop');
     }
 
-    public function consultation()
+    public function shopdetail()
     {
-        return view('vetconsultation');
+        return view('shop-detail');
     }
 
-    public function petshop()
+    public function shopcheckout()
     {
-        return view('petshop');
+        return view('shop-checkout');
     }
 
-    public function about()
+    public function shopchart()
     {
-        return view('about');
+        return view('shop-chart');
+    }
+
+    public function vets()
+    {
+        return view('vet-consultation');
     }
 }
