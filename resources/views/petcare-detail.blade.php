@@ -73,23 +73,31 @@
 <ul class="nav nav-tabs">
 <li class="active"><a data-toggle="tab" href="#home">Descriptions</a></li>
 <li><a data-toggle="tab" href="#menu1">Reviews</a></li>
-<li><a data-toggle="tab" href="#menu3">Service</a></li>
 </ul>
 <div class="tab-content">
 <div id="home" class="tab-pane fade in active">
 <div class="row">
 <p><img src="{{ URL::asset('petvet/images/dog-cage.jpg') }}" class="alignleft" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 <br><strong><small>$1/day</small></strong>
+<br>
+<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
 </p>
+<br><br>
 </div>
 <div class="row">
 <p><img src="{{ URL::asset('petvet/images/cat-cage.jpg') }}" class="alignleft" alt="">labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 <br><strong><small>$1/day</small></strong>
+<br>
+<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
+<br><br>
 </p>
 </div>
 <div class="row">
-<p><img src="{{ URL::asset('petvet/images/bird-cage.jpg') }}" class="alignleft" alt="">labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+<p><img src="{{ URL::asset('petvet/images/bird-cage.jpg') }}" class="alignleft" alt="">labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 <br><strong><small>$1/day</small></strong>
+<br>
+<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
+<br><br>
 </p>
 </div>
 </div>
@@ -158,53 +166,6 @@
 </div>
 </div>
 </div>
-</div>
-<div id="menu3" class="tab-pane fade">
-<div class="row">
-	<div class="col-sm-3">
-		<img src="{{ URL::asset('petvet/images/dog-cage.jpg') }}" class="alignleft" alt=""> 
-	</div>
-	<div class="col-sm-9">
-		<h4>Dog's Room</h4>
-		<div class="form-group">
-		  <label for="example-number-input" class="col-2 col-form-label">Quantity</label>
-		  <div class="col-10">
-		    <input class="form-control" type="number" value="0" id="example-number-input">
-		  </div>
-		</div>	
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-3">
-		<img src="{{ URL::asset('petvet/images/cat-cage.jpg') }}" class="alignleft" alt=""> 
-	</div>
-	<div class="col-sm-9">
-		<h4>Cat's Room</h4>
-		<div class="form-group">
-		  <label for="example-number-input" class="col-2 col-form-label">Quantity</label>
-		  <div class="col-10">
-		    <input class="form-control" type="number" value="0" id="example-number-input">
-		  </div>
-		</div>	
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-3">
-		<img src="{{ URL::asset('petvet/images/bird-cage.jpg') }}" class="alignleft" alt=""> 
-	</div>
-	<div class="col-sm-9">
-		<h4>Bird's Room</h4>
-		<div class="form-group">
-		  <label for="example-number-input" class="col-2 col-form-label">Quantity</label>
-		  <div class="col-10">
-		    <input class="form-control" type="number" value="0" id="example-number-input">
-		  </div>
-		</div>	
-	</div>
-</div>
-<br><br>
-<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
-<br><br><br>
 </div>
 </div>
 </div>
