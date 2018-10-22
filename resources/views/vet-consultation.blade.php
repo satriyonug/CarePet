@@ -45,7 +45,7 @@
 </div>
 <h4><a href="team-single.html"> Amanda Jessi <span>|</span> <small>Veterinary</small></a></h4>
 <p>Cras dapibus. Vivamus elementum semper Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae</p>
-<a href="#" class="btn btn-primary btn-xs">Ask Me</a>
+<a href="{{ url('/chat') }}" class="btn btn-primary btn-xs">Ask Me</a>
 </div>
 <div class="owl-featured team-member">
 <div class="entry">
@@ -61,7 +61,7 @@
 </div>
 <h4><a href="team-single.html"> Jessica DEO <span>|</span> <small>Veterinary</small></a></h4>
 <p>Cras dapibus. Vivamus elementum semper Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae</p>
-<a href="#" class="btn btn-primary btn-xs">Ask Me</a>
+<a href="{{ url('/chat') }}" class="btn btn-primary btn-xs">Ask Me</a>
 </div>
 <div class="owl-featured team-member">
 <div class="entry">
@@ -77,7 +77,7 @@
 </div>
 <h4><a href="team-single.html"> Linda MARTIN <span>|</span> <small>Veterinary</small></a></h4>
 <p>Cras dapibus. Vivamus elementum semper Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae</p>
-<a href="#" class="btn btn-primary btn-xs">Ask Me</a>
+<a href="{{ url('/chat') }}" class="btn btn-primary btn-xs">Ask Me</a>
 </div>
 <div class="owl-featured team-member">
 <div class="entry">
@@ -93,7 +93,7 @@
 </div>
 <h4><a href="team-single.html"> Adrian STUFA <span>|</span> <small>Veterinary</small></a></h4>
 <p>Cras dapibus. Vivamus elementum semper Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae</p>
-<a href="#" class="btn btn-primary btn-xs">Ask Me</a>
+<a href="{{ url('/chat') }}" class="btn btn-primary btn-xs">Ask Me</a>
 </div>
 </div>
 </div>

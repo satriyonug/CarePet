@@ -24,6 +24,9 @@
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/animate.css%2bbootstrap.css%2bcarousel.css.pagespeed.cc.DyfOC2Q_i6.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/A.style.css%2bcss%2c%2c_custom.css%2cMcc.dJXLFsuLOF.css.pagespeed.cf.UgtDm8q7vQ.css') }}"/>
 <script src="{{ URL::asset('petvet/js/modernizer.js.pagespeed.jm.1UdTGnoJUM.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/chat.css') }}" media="screen"/>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -266,6 +269,7 @@ $(".rotate").textrotator({animation:"fade",speed:1000});function toggleChevron(e
 <script>jQuery(document).ready(function(){jQuery('.tp-banner').show().revolution({dottedOverlay:"none",delay:16000,startwidth:1170,startheight:620,hideThumbs:200,thumbWidth:100,thumbHeight:50,thumbAmount:5,navigationType:"none",navigationArrows:"solo",navigationStyle:"preview2",touchenabled:"on",onHoverStop:"on",swipe_velocity:0.7,swipe_min_touches:1,swipe_max_touches:1,drag_block_vertical:false,parallax:"mouse",parallaxBgFreeze:"on",parallaxLevels:[10,7,4,3,2,5,4,3,2,1],parallaxDisableOnMobile:"off",keyboardNavigation:"off",navigationHAlign:"center",navigationVAlign:"bottom",navigationHOffset:0,navigationVOffset:20,soloArrowLeftHalign:"left",soloArrowLeftValign:"center",soloArrowLeftHOffset:20,soloArrowLeftVOffset:0,soloArrowRightHalign:"right",soloArrowRightValign:"center",soloArrowRightHOffset:20,soloArrowRightVOffset:0,shadow:0,fullWidth:"on",fullScreen:"off",spinner:"spinner4",stopLoop:"off",stopAfterLoops:-1,stopAtSlide:-1,shuffle:"off",autoHeight:"off",forceFullWidth:"off",hideThumbsOnMobile:"off",hideNavDelayOnMobile:1500,hideBulletsOnMobile:"off",hideArrowsOnMobile:"off",hideThumbsUnderResolution:0,hideSliderAtLimit:0,hideCaptionAtLimit:0,hideAllCaptionAtLilmit:0,startWithSlide:0,fullScreenOffsetContainer:""});});</script>
 <script src="{{ URL::asset('petvet/js/custom.js%2bcontact.js%2bmap.js.pagespeed.jc.gDJwcCfkw1.js') }}"></script><script>eval(mod_pagespeed_OFpQ46Wcku);</script>
 <script src="{{ url('http://maps.google.com/maps/api/js?sensor=false') }}"></script>
+<script src="{{ URL::asset('petvet/js/chat.js') }}"></script><script>eval(mod_pagespeed_OFpQ46Wcku);</script>
 <script>eval(mod_pagespeed_dE_1WRKGcf);</script>
 <script>eval(mod_pagespeed_9GFjDb6KwW);</script>
 </body>

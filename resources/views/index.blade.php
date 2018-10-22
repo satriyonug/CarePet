@@ -65,64 +65,6 @@
 	</div>
 </section>
 
-<section class="section grey">
-<div class="container">
-<div class="general-title text-center">
-<h4>Our Working Process</h4>
-<hr>
-<p class="lead">Listed below our awesome services & departments</p>
-</div>
-<div class="row module-wrapper">
-<div class="col-md-7 col-sm-12">
-<div class="service-style-1">
-<div class="tabbed-widget">
-<ul class="nav nav-tabs">
-<li class="active"><a data-toggle="tab" href="#home">Surgical</a></li>
-<li><a data-toggle="tab" href="#menu1">PetBarber</a></li>
-<li><a data-toggle="tab" href="#menu2">Patient</a></li>
-<li><a data-toggle="tab" href="#menu3">Laboratory</a></li>
-</ul>
-<div class="tab-content">
-<div id="home" class="tab-pane fade in active">
-<p><img src="{{ URL::asset('petvet/upload/xservice_01.png.pagespeed.ic.Mg2uwHHPBq.jpg') }}" class="alignleft" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-<br>
-<p>labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore..</p>
-</div>
-<div id="menu1" class="tab-pane fade">
-<p><img src="{{ URL::asset('petvet/upload/xservice_02.png.pagespeed.ic.DUNe2VyiJk.jpg') }}" class="alignright" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-<br>
-<p>labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-</div>
-<div id="menu2" class="tab-pane fade">
-<p><img src="{{ URL::asset('petvet/upload/xservice_03.png.pagespeed.ic.VBaBmQNb0B.jpg') }}" class="alignleft" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-<br>
-<p>labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-</div>
-<div id="menu3" class="tab-pane fade">
-<p><img src="{{ URL::asset('petvet/upload/xservice_04.png.pagespeed.ic.cPJu2_kVMc.jpg') }}" class="alignright" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-<br>
-<p>labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-5 col-sm-12">
-<div class="workinghours">
-<ul>
-<li>Monday <span>9:00am - 7:00pm</span></li>
-<li>Tuesday <span>9:00am - 7:00pm</span></li>
-<li>Wednesday <span>9:00am - 7:00pm</span></li>
-<li>Thursday <span>9:00am - 7:00pm</span></li>
-<li>Friday <span>9:00am - 7:00pm</span></li>
-<li>Saturday <span>10:00am - 7:00pm</span></li>
-<li>Sunday <span>11:00am - 7:00pm</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section class="section white">
 <div class="container">
 <div class="general-title text-center">

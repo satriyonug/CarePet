@@ -85,4 +85,9 @@ class HomeController extends Controller
     {
         return view('sign-in');
     }
+    
+    public function chat()
+    {
+        return view('chat');
+    }
 }
