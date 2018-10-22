@@ -55,4 +55,8 @@ class HomeController extends Controller
     {
         return view('vet-consultation');
     }
+    public function appointment()
+    {   
+        return view('appointment');
+    }
 }

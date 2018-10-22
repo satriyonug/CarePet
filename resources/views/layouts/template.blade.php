@@ -140,7 +140,7 @@
 <li><a href="gallery-1.html">Gallery</a></li>
 <li><a href="shop.html">Shop</a></li>
 <li><a href="blog.html">Blog</a></li>
-<li><a href="appointment.html">Appointment</a></li>
+<li><a href="{{ url('/appointment') }}">Appointment</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </div>
@@ -234,6 +234,7 @@
 <script>eval(mod_pagespeed_XKKesQfpp0);</script>
 <script>eval(mod_pagespeed_z83SFsIgz$);</script>
 <script>eval(mod_pagespeed_WBv_OkcQEu);</script>
+<!-- <script src="{{ URL::asset('js/scriptselect.js') }}"></script> -->
 <script>//<![CDATA[
 (function($){"use strict";$(window).load(function(){$('#loader').delay(300).fadeOut('slow');$('#loader-container').delay(200).fadeOut('slow');$('body').delay(300).css({'overflow':'visible'});})
 new WOW({boxClass:'wow',animateClass:'animated',offset:0,mobile:true,live:true}).init();$('body').tooltip({selector:"[data-tooltip=tooltip]",container:"body"});$('#owl-team').owlCarousel({loop:true,margin:30,nav:true,dots:false,responsive:{0:{items:1},600:{items:2},1000:{items:4}}})

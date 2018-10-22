@@ -24,3 +24,4 @@ Route::get('/shop-detail', 'HomeController@shopdetail');
 Route::get('/shop-checkout', 'HomeController@shopcheckout');
 Route::get('/shop-chart', 'HomeController@shopchart');
 Route::get('/vets', 'HomeController@vets');
+Route::get('/appointment', 'HomeController@appointment');
