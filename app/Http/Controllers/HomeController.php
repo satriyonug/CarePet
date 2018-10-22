@@ -55,4 +55,14 @@ class HomeController extends Controller
     {
         return view('vet-consultation');
     }
+
+    public function petcare()
+    {
+        return view('petcare-index');
+    }
+
+    public function petcaredetail()
+    {
+        return view('petcare-detail');
+    }
 }
