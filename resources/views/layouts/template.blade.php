@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="keywords" content="">
-<title>PetVet | A Pet Shop Responsive HTML Template</title>
+<title>CarePet | A Pet Shop</title>
 <link rel="shortcut icon" href="{{ URL::asset('petvet/images/favicon.ico') }}" type="image/x-icon">
 <link rel="apple-touch-icon" href="{{ URL::asset('petvet/images/xapple-touch-icon.png.pagespeed.ic.lbIMAdR47L.png') }}"/>
 <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('petvet/images/xapple-touch-icon-57x57.png.pagespeed.ic.lbIMAdR47L.png') }}">
@@ -24,6 +24,9 @@
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/animate.css%2bbootstrap.css%2bcarousel.css.pagespeed.cc.DyfOC2Q_i6.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/A.style.css%2bcss%2c%2c_custom.css%2cMcc.dJXLFsuLOF.css.pagespeed.cf.UgtDm8q7vQ.css') }}"/>
 <script src="{{ URL::asset('petvet/js/modernizer.js.pagespeed.jm.1UdTGnoJUM.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/chat.css') }}" media="screen"/>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -41,8 +44,8 @@
 <div class="row-fluid">
 <div class="col-md-6 text-left">
 <p>
-<strong>Call us:</strong> +90 543 123 45 67 &nbsp;&nbsp;
-<strong>Email:</strong> <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+<strong>Call us:</strong> 0812-3456-7890 &nbsp;&nbsp;
+<strong>Email:</strong> <a href="mailto:carepet@yoursite.com">carepet@yoursite.com</a>
 </p>
 </div>
 <div class="col-md-6 text-right">
@@ -67,7 +70,7 @@
 <div class="navbar-table">
 <div class="navbar-cell tight">
 <div class="navbar-header">
-<a class="navbar-brand" href="{{ url('/index')}}"><img src="{{ URL::asset('petvet/images/xlogo.png.pagespeed.ic.jEZLnjLad0.png') }}" alt="Ova"></a>
+<a class="navbar-brand" href="{{ url('/index')}}"><img height="60 px" width="160 px" src="{{ URL::asset('petvet/images/carepetnewlogo.png') }}" alt="Ova"></a>
 <div>
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
 <span class="sr-only">Toggle navigation</span>
@@ -81,31 +84,34 @@
 <div class="navbar-cell">
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown has-submenu">
-<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false">Home <span class="fa fa-angle-down"></span></a>
-<ul class="dropdown-menu start-left" role="menu">
-<li><a href="index-boxed.html">Home Boxed</a></li>
-<li><a href="index1.html">Home Version 1</a></li>
-<li><a href="index2.html">Home Version 2</a></li>
-<li><a href="index3.html">Home Version 3</a></li>
-<li><a href="index4.html">Home Version 4</a></li>
-<li><a href="index5.html">Home Version 5</a></li>
-<li><a href="index6.html">Home Version 6</a></li>
-</ul>
+<a href="{{ url('/index')}}" class="dropdown-toggle" role="button" aria-expanded="false">Home</a>
+
 </li>
 <li><a href="{{ url('vets')}}">Our Vets</a></li>
 <li class="dropdown has-submenu">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="fa fa-angle-down"></span></a>
 <ul class="dropdown-menu start-left" role="menu">
-<li><a href="services.html">Our Services</a></li>
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog Pages <span class="fa fa-angle-right"></span></a>
+<li><a href="{{ url('/service') }}">Our Services</a></li>
+
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Shop <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
-<li><a href="blog.html">Blog Default</a></li>
-<li><a href="blog-1.html">Blog Fullwidth</a></li>
-<li><a href="blog-single-1.html">Blog Single</a></li>
-<li><a href="blog-single-2.html">Blog Single Alt</a></li>
+<li><a href="{{ url('/shop') }}">Shop Page</a></li>
+<li><a href="{{ url('/shop-detail') }}">Shop Detail</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
 </ul>
 </li>
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop Pages <span class="fa fa-angle-right"></span></a>
+
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Care <span class="fa fa-angle-right"></span></a>
+<ul class="dropdown-menu show-left" role="menu">
+<li><a href="{{ url('/petcare') }}">Pet Care</a></li>
+<li><a href="{{ url('/petcare-detail') }}">Pet Care Detail</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Pet Care Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Pet Care Cart</a></li>
+</ul>
+</li>
+
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Send Pet <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
 <li><a href="{{ url('/shop') }}">Shop Page</a></li>
 <li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
@@ -113,35 +119,55 @@
 <li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
 </ul>
 </li>
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gallery Pages <span class="fa fa-angle-right"></span></a>
+
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vet Consultation <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
-<li><a href="gallery-1.html">Gallery One</a></li>
-<li><a href="gallery-2.html">Gallery Two</a></li>
-<li><a href="gallery-3.html">Gallery Three</a></li>
-<li><a href="gallery-4.html">Gallery Masonry</a></li>
-<li><a href="gallery-single.html">Gallery Single</a></li>
+<li><a href="{{ url('/shop') }}">Shop Page</a></li>
+<li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
 </ul>
 </li>
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Other Pages <span class="fa fa-angle-right"></span></a>
+
+
+</ul>
+</li>
+
+<li class="dropdown has-submenu">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pets <span class="fa fa-angle-down"></span></a>
+<ul class="dropdown-menu start-left" role="menu">
+
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Care <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
-<li><a href="maintenance.html">Maintenance</a></li>
-<li><a href="404.html">Not Found (404)</a></li>
-<li><a href="page-sidebar.html">Page Sidebar</a></li>
-<li><a href="page-fullwidth.html">Page Fullwidth</a></li>
-<li><a href="page-sitemap.html">Sitemap</a></li>
+<li><a href="{{ url('/petcare') }}">Pet Care</a></li>
+<li><a href="{{ url('/petcare-detail') }}">Pet Care Detail</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Pet Care Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Pet Care Cart</a></li>
 </ul>
 </li>
-<li><a href="pricing.html">Pricing & Plans</a></li>
-<li><a href="testimonials.html">Testimonials</a></li>
-<li><a href="shortcodes.html">Shortcodes</a></li>
-<li><a href="typography.html">Typography</a></li>
+
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Send Pet <span class="fa fa-angle-right"></span></a>
+<ul class="dropdown-menu show-left" role="menu">
+<li><a href="{{ url('/shop') }}">Shop Page</a></li>
+<li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
 </ul>
 </li>
-<li><a href="gallery-1.html">Gallery</a></li>
-<li><a href="shop.html">Shop</a></li>
-<li><a href="blog.html">Blog</a></li>
+
+
+
+
+
+</ul>
+</li>
+<li><a href="{{ url('/shop') }}">Shop</a></li>
+<li><a href="{{ url('/blog') }}">Blog</a></li>
 <li><a href="{{ url('/appointment') }}">Appointment</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="{{ url('/contact')}}">Contact</a></li>
+<li><a href="{{ url('/sign-in')}}">Login</a></li>
+<li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
+
 </ul>
 </div>
 </div>
@@ -162,7 +188,7 @@
 <div class="col-md-4 col-sm-6">
 <div class="widget">
 <div class="text-center">
-<img src="{{ URL::asset('petvet/images/xflogo.png.pagespeed.ic.eNO_4SEZBS.png') }}" alt="" class="img-responsive">
+<img height="100" width="250" src="{{ URL::asset('petvet/images/carepetputih.png') }}" alt="" class="img-responsive">
 <p>Lorem iam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet.</p>
 <div class="social">
 <a href="#" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -243,5 +269,10 @@ $(".rotate").textrotator({animation:"fade",speed:1000});function toggleChevron(e
 <script src="{{ URL::asset('petvet/rs-plugin/js/jquery.themepunch.tools.min.js.pagespeed.jm.0PLSBOOLZa.js') }}"></script>
 <script src="{{ URL::asset('petvet/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
 <script>jQuery(document).ready(function(){jQuery('.tp-banner').show().revolution({dottedOverlay:"none",delay:16000,startwidth:1170,startheight:620,hideThumbs:200,thumbWidth:100,thumbHeight:50,thumbAmount:5,navigationType:"none",navigationArrows:"solo",navigationStyle:"preview2",touchenabled:"on",onHoverStop:"on",swipe_velocity:0.7,swipe_min_touches:1,swipe_max_touches:1,drag_block_vertical:false,parallax:"mouse",parallaxBgFreeze:"on",parallaxLevels:[10,7,4,3,2,5,4,3,2,1],parallaxDisableOnMobile:"off",keyboardNavigation:"off",navigationHAlign:"center",navigationVAlign:"bottom",navigationHOffset:0,navigationVOffset:20,soloArrowLeftHalign:"left",soloArrowLeftValign:"center",soloArrowLeftHOffset:20,soloArrowLeftVOffset:0,soloArrowRightHalign:"right",soloArrowRightValign:"center",soloArrowRightHOffset:20,soloArrowRightVOffset:0,shadow:0,fullWidth:"on",fullScreen:"off",spinner:"spinner4",stopLoop:"off",stopAfterLoops:-1,stopAtSlide:-1,shuffle:"off",autoHeight:"off",forceFullWidth:"off",hideThumbsOnMobile:"off",hideNavDelayOnMobile:1500,hideBulletsOnMobile:"off",hideArrowsOnMobile:"off",hideThumbsUnderResolution:0,hideSliderAtLimit:0,hideCaptionAtLimit:0,hideAllCaptionAtLilmit:0,startWithSlide:0,fullScreenOffsetContainer:""});});</script>
+<script src="{{ URL::asset('petvet/js/custom.js%2bcontact.js%2bmap.js.pagespeed.jc.gDJwcCfkw1.js') }}"></script><script>eval(mod_pagespeed_OFpQ46Wcku);</script>
+<script src="{{ url('http://maps.google.com/maps/api/js?sensor=false') }}"></script>
+<script src="{{ URL::asset('petvet/js/chat.js') }}"></script><script>eval(mod_pagespeed_OFpQ46Wcku);</script>
+<script>eval(mod_pagespeed_dE_1WRKGcf);</script>
+<script>eval(mod_pagespeed_9GFjDb6KwW);</script>
 </body>
 </html>
