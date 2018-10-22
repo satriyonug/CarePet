@@ -27,3 +27,4 @@ Route::get('/vets', 'HomeController@vets');
 Route::get('/contact', 'HomeController@contact');
 Route::get('/service', 'HomeController@service');
 Route::get('/blog', 'HomeController@blog');
+Route::get('/sign-in', 'HomeController@signin');

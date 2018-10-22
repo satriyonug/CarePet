@@ -70,4 +70,9 @@ class HomeController extends Controller
     {
         return view('blog');
     }
+
+    public function signin()
+    {
+        return view('sign-in');
+    }
 }

@@ -41,8 +41,8 @@
 <div class="row-fluid">
 <div class="col-md-6 text-left">
 <p>
-<strong>Call us:</strong> +90 543 123 45 67 &nbsp;&nbsp;
-<strong>Email:</strong> <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+<strong>Call us:</strong> 0812-3456-7890 &nbsp;&nbsp;
+<strong>Email:</strong> <a href="mailto:carepet@yoursite.com">carepet@yoursite.com</a>
 </p>
 </div>
 <div class="col-md-6 text-right">
@@ -161,7 +161,7 @@
 <li><a href="{{ url('/shop') }}">Shop</a></li>
 <li><a href="{{ url('/blog') }}">Blog</a></li>
 <li><a href="{{ url('/contact')}}">Contact</a></li>
-<li><a href="{{ url('/login')}}">Login</a></li>
+<li><a href="{{ url('/sign-in')}}">Login</a></li>
 <li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
 </ul>
 </div>
