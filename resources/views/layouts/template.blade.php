@@ -67,7 +67,7 @@
 <div class="navbar-table">
 <div class="navbar-cell tight">
 <div class="navbar-header">
-<a class="navbar-brand" href="{{ url('/index')}}"><img src="{{ URL::asset('petvet/images/xlogo.png.pagespeed.ic.jEZLnjLad0.png') }}" alt="Ova"></a>
+<a class="navbar-brand" href="{{ url('/index')}}"><img height="60 px" width="160 px" src="{{ URL::asset('petvet/images/carepetnewlogo.png') }}" alt="Ova"></a>
 <div>
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
 <span class="sr-only">Toggle navigation</span>
@@ -93,7 +93,7 @@
 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Shop <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
 <li><a href="{{ url('/shop') }}">Shop Page</a></li>
-<li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
+<li><a href="{{ url('/shop-detail') }}">Shop Detail</a></li>
 <li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
 <li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
 </ul>
@@ -101,10 +101,10 @@
 
 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Care <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
-<li><a href="{{ url('/shop') }}">Shop Page</a></li>
-<li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
-<li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
-<li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
+<li><a href="{{ url('/petcare') }}">Pet Care</a></li>
+<li><a href="{{ url('/petcare-detail') }}">Pet Care Detail</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Pet Care Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Pet Care Cart</a></li>
 </ul>
 </li>
 
@@ -183,7 +183,7 @@
 <div class="col-md-4 col-sm-6">
 <div class="widget">
 <div class="text-center">
-<img src="{{ URL::asset('petvet/images/xflogo.png.pagespeed.ic.eNO_4SEZBS.png') }}" alt="" class="img-responsive">
+<img height="100" width="250" src="{{ URL::asset('petvet/images/carepetputih.png') }}" alt="" class="img-responsive">
 <p>Lorem iam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet.</p>
 <div class="social">
 <a href="#" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
