@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
-@section('content')
+@section('maincontent')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -11,7 +11,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="post-body-form text-center">
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="post-body-form text-center">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

@@ -134,6 +134,15 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pets <span class="fa fa-angle-down"></span></a>
 <ul class="dropdown-menu start-left" role="menu">
 
+<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Care <span class="fa fa-angle-right"></span></a>
+<ul class="dropdown-menu show-left" role="menu">
+<li><a href="{{ url('/petcare') }}">Pet Care</a></li>
+<li><a href="{{ url('/petcare-detail') }}">Pet Care Detail</a></li>
+<li><a href="{{ url('/shop-checkout') }}">Pet Care Checkout</a></li>
+<li><a href="{{ url('/shop-chart') }}">Pet Care Cart</a></li>
+</ul>
+</li>
+
 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Send Pet <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
 <li><a href="{{ url('/shop') }}">Shop Page</a></li>
@@ -143,14 +152,6 @@
 </ul>
 </li>
 
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Care <span class="fa fa-angle-right"></span></a>
-<ul class="dropdown-menu show-left" role="menu">
-<li><a href="{{ url('/shop') }}">Shop Page</a></li>
-<li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
-<li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
-<li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
-</ul>
-</li>
 
 
 

@@ -32,7 +32,8 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-3 col-xs-12">
 <div class="appoform-wrapper">
-<form method="post">
+<form method="POST" action="{{ route('login') }}">
+@csrf
 <header class="form-header">
 <h3>Sign In Form</h3>
 </header>
@@ -41,15 +42,15 @@
 <fieldset class="row-fluid appoform">
 <div class="col-md-12">
 <label class="sr-only">Email</label>
-<input id="datepicker" type="text" placeholder="Email" class="form-control">
+<input id="email" name="email" type="text" placeholder="Email" class="form-control">
 </div>
 <div class="col-md-12">
 <label class="sr-only">Password</label>
-<input type="text" placeholder="Password" class="form-control">
+<input type="password" id="password" name="password" placeholder="Password" class="form-control">
 </div>
 
 <div class="col-md-6">
-<button type="reset" class="btn btn-primary btn-block btn-lg">Sign In</button>
+<button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
 </div>
 <div class="col-md-6">
 <button type="reset" class="btn btn-success btn-block btn-lg">Sign Up</button>
