@@ -59,7 +59,7 @@ class HomeController extends Controller
     public function appointment()
     {   
         return view('appointment');
-
+    }
     public function petcare()
     {
         return view('petcare-index');
