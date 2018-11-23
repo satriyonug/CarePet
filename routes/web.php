@@ -27,6 +27,8 @@ Route::get('/vets', 'HomeController@vets');
 Route::get('/appointment', 'HomeController@appointment');
 Route::get('/petcare', 'HomeController@petcare');
 Route::get('/petcare-detail', 'HomeController@petcaredetail');
+Route::get('/petcare-checkout', 'HomeController@petcarecheckout');
+Route::get('/petcare-chart', 'HomeController@petcarechart');
 Route::get('/contact', 'HomeController@contact');
 Route::get('/service', 'HomeController@service');
 Route::get('/blog', 'HomeController@blog');

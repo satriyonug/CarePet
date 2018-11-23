@@ -70,6 +70,16 @@ class HomeController extends Controller
         return view('petcare-detail');
     }
     
+    public function petcarecheckout()
+    {
+        return view('petcare-checkout');
+    }
+    
+    public function petcarechart()
+    {
+        return view('petcare-chart');
+    }
+    
     public function contact()
     {
         return view('contact');

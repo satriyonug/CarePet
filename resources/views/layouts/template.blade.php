@@ -106,8 +106,8 @@
 <ul class="dropdown-menu show-left" role="menu">
 <li><a href="{{ url('/petcare') }}">Pet Care</a></li>
 <li><a href="{{ url('/petcare-detail') }}">Pet Care Detail</a></li>
-<li><a href="{{ url('/shop-checkout') }}">Pet Care Checkout</a></li>
-<li><a href="{{ url('/shop-chart') }}">Pet Care Cart</a></li>
+<li><a href="{{ url('/petcare-checkout') }}">Pet Care Checkout</a></li>
+<li><a href="{{ url('/petcare-chart') }}">Pet Care Cart</a></li>
 </ul>
 </li>
 
@@ -133,8 +133,8 @@
 <ul class="dropdown-menu show-left" role="menu">
 <li><a href="{{ url('/petcare') }}">Pet Care</a></li>
 <li><a href="{{ url('/petcare-detail') }}">Pet Care Detail</a></li>
-<li><a href="{{ url('/shop-checkout') }}">Pet Care Checkout</a></li>
-<li><a href="{{ url('/shop-chart') }}">Pet Care Cart</a></li>
+<li><a href="{{ url('/petcare-checkout') }}">Pet Care Checkout</a></li>
+<li><a href="{{ url('/petcare-chart') }}">Pet Care Cart</a></li>
 </ul>
 </li>
 

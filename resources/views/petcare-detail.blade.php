@@ -80,7 +80,7 @@
 <p><img src="{{ URL::asset('petvet/images/dog-cage.jpg') }}" class="alignleft" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 <br><strong><small>$1/day</small></strong>
 <br>
-<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
+<a href="{{ url('/petcare-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
 </p>
 <br><br>
 </div>
@@ -88,7 +88,7 @@
 <p><img src="{{ URL::asset('petvet/images/cat-cage.jpg') }}" class="alignleft" alt="">labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 <br><strong><small>$1/day</small></strong>
 <br>
-<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
+<a href="{{ url('/petcare-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
 <br><br>
 </p>
 </div>
@@ -96,7 +96,7 @@
 <p><img src="{{ URL::asset('petvet/images/bird-cage.jpg') }}" class="alignleft" alt="">labore et dolore magna aliqua. amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor dipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 <br><strong><small>$1/day</small></strong>
 <br>
-<a href="{{ url('/shop-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
+<a href="{{ url('/petcare-checkout') }}" class="btn btn-primary" style="float:right;">Checkout</a>
 <br><br>
 </p>
 </div>
