@@ -14,7 +14,7 @@ class SendPetController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -24,7 +24,7 @@ class SendPetController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +35,21 @@ class SendPetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->origins != "NULL" && $request->destinations != "NULL")
+        {
+            $sendpet = new SendPet;
+            $sendpet->nama_pengirim = $request->name;
+            $sendpet->telp_pengirim = $request->telp_pengirim;
+            $sendpet->nama_penerima = $request->tujuan;
+            $sendpet->telp_penerima = $request->telp_penerima;
+            $sendpet->alamat_jemput = $request->origins;
+            $sendpet->alamat_antar = $request->destinations;
+            $sendpet->harga = $request->billing;
+            $sendpet->catatan_pengirim = $request->text;
+            $sendpet->save();
+            //return dd($sendpet);
+            return redirect('success');    
+        }   
     }
 
     /**
