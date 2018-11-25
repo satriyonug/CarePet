@@ -21,6 +21,7 @@ class CreatePetCaresTable extends Migration
             $table->string('jenis_binatang',100);
             $table->integer('lama_penitipan');
             $table->string('catatan',500);
+            $table->string('harga',10);
             $table->timestamps();
         });
     }

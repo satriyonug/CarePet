@@ -23,6 +23,7 @@ class CreatePetShopsTable extends Migration
             $table->string('telpon',20);
             $table->integer('jumlah_barang');
             $table->string('catatan',500);
+            $table->string('harga',10);
             $table->timestamps();
         });
     }

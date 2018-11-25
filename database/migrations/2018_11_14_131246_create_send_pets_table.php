@@ -23,6 +23,7 @@ class CreateSendPetsTable extends Migration
             $table->string('alamat_antar',200);
             $table->string('catatan_pengirim',500);
             $table->string('catatan_driver',500);
+            $table->string('harga',10);
             $table->timestamps();
         });
     }
