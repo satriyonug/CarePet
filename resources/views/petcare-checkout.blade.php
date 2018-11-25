@@ -56,19 +56,26 @@
                         <h4>Pet *</h4>
                      </div>                     
 	              	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	                    <label>Kind of Pet *</label>
-	                    <!-- <input type="text" name="jenis_binatang" id="kindofpet" class="form-control" placeholder="Kind of Pet"> -->
-                       <select class="form-control select2" name="jenis_binatang">
+	                    <label>Number of Pet *</label>
+	                    <input type="number" name="jumlah_binatang" id="kindofpet" class="form-control" placeholder="Number of Pet">
+                        @if (($id) == 1)
+                            <input style="display: none;" name="jenis_binatang" value="Cat">
+                        @elseif (($id) == 2)
+                            <input style="display: none;" name="jenis_binatang" value="Dog">
+                        @endif
+                      
+<!--                        <select multiple class="form-control select2" name="jenis_binatang[]">
                         <optgroup label="Select Kind of Pet" >
                           <option value="Bird">Bird</option>
                           <option value="Cat">Cat</option>
                           <option value="Dog">Dog</option>
                         </optgroup>
-                      </select>
+                      </select> -->
 	                </div>
 	              	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	                    <label>Duration (Day) *</label>
 	                    <input type="Number" name="lama_penitipan" id="duration" class="form-control" placeholder="Duration">
+
 	                </div> 
                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                      	<label>Other Notes</label>

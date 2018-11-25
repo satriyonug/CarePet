@@ -27,7 +27,7 @@ Route::get('/vets', 'HomeController@vets');
 Route::get('/appointment', 'HomeController@appointment');
 Route::get('/petcare', 'HomeController@petcare');
 Route::get('/petcare-detail', 'HomeController@petcaredetail');
-Route::get('/petcare-checkout', 'HomeController@petcarecheckout');
+Route::get('/petcare-checkout/{id}', 'HomeController@petcarecheckout');
 Route::get('/petcare-chart', 'HomeController@petcarechart');
 Route::post('/petcare-checkout/create', 'PetCareController@store');
 Route::get('/contact', 'HomeController@contact');
