@@ -8,7 +8,7 @@
 <ul>
 <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="{{ URL::asset('petvet/upload/slider_new_01.jpg') }}" data-saveperformance="off" data-title="Vet">
 <img src="{{ URL::asset('petvet/upload/xslider_new_01.jpg.pagespeed.ic.NB8444jxiM.jpg') }}" alt="fullslide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-<div class="tp-caption slider_layer_01 text-center lft tp-resizeme" data-x="center" data-y="220" data-speed="1000" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><i class="fa fa-paw"></i> Creative <strong>Pet Vet</strong> Template
+<div class="tp-caption slider_layer_01 text-center lft tp-resizeme" data-x="center" data-y="220" data-speed="1000" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><i class="fa fa-paw"></i> Creative <strong>Care Vet</strong>
 </div>
 <div class="tp-caption slider_layer_02 text-center lft tp-resizeme" data-x="center" data-y="310" data-speed="1000" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Great Theme For Pet Shop, Veterinarian Websites with tons of options<br> custom elements and custom sections!
 </div>

@@ -106,4 +106,9 @@ class HomeController extends Controller
     {
         return view('chat');
     }
+
+    public function success()
+    {
+        return view('success');
+    }
 }

@@ -26,13 +26,149 @@
 <script src="{{ URL::asset('petvet/js/modernizer.js.pagespeed.jm.1UdTGnoJUM.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/chat.css') }}" media="screen"/>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-
+  <style type="text/css">
+    #map {
+      height: 480px;
+      width: 100%;
+      border: solid thin #333;
+      margin-top: 20px;
+    }
+ 
+    #map img { 
+      max-width: none;
+    }
+ 
+    #mapCanvas label { 
+      width: auto; display:inline; 
+    } 
+  </style>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    var map;
+    var geocoder;
+    var bounds = new google.maps.LatLngBounds();
+    var markersArray = [];
+      
+    // setting marker untuk marker asal dan tujuan
+    var destinationIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000";
+    var originIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=O|FFFF00|000000";
+ 
+    // tentukan terlebih dahulu letak petanya 
+    function initialize() {
+      var opts = {
+        center: new google.maps.LatLng(-7.25009,112.744331),
+        zoom: 5,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      map = new google.maps.Map(document.getElementById('map'), opts);
+      geocoder = new google.maps.Geocoder();
+ 
+      // setting agar texfield pada kolom asal dan juga tujuan dapat memanggil fungsi autocomplete
+      var asal = new google.maps.places.Autocomplete((document.getElementById('origins')),{ types: ['geocode'] });
+      var tujuan = new google.maps.places.Autocomplete((document.getElementById('destinations')),{ types: ['geocode'] });
+    }
+ 
+    /*      
+    menghitung jarak dari data yg dikirim dari form
+    disini saya setting untuk mode DRIVING dan menggunakan jalan raya atau juga tol,
+    jika ingin mengganti konfigurasinya, silahkan ganti false dengan true
+    */
+    function calculateDistances() {
+      var service = new google.maps.DistanceMatrixService();
+      service.getDistanceMatrix(
+      { 
+        origins: [document.getElementById("origins").value],
+        destinations: [document.getElementById("destinations").value],
+        travelMode: google.maps.TravelMode.DRIVING, 
+        unitSystem: google.maps.UnitSystem.METRIC,
+        avoidHighways: false,
+        avoidTolls: false
+      }, callback);
+    }
+      
+    // responde dari Googlemaps Distance Matrix akan diolah dan di kirim ke output HTML
+    function callback(response, status) {
+      if (status != google.maps.DistanceMatrixStatus.OK) {
+        alert('Error was: ' + status);
+      } else {
+        var origins = response.originAddresses;
+        var destinations = response.destinationAddresses;
+        deleteOverlays();
+ 
+        for (var i = 0; i < origins.length; i++) {
+          var results = response.rows[i].elements;
+          addMarker(origins[i], false);
+          for (var j = 0; j < results.length; j++) {
+            addMarker(destinations[j], true);
+          }
+    
+          /*          
+            disini perhitungan tarif, pertama hilangkan dulu 'km'
+            dan ubah tanda desimal koma dengan titik. 
+          */
+          var str = results[0].distance.text;
+          var distance = str.replace(' km', '');
+          var distance = distance.replace(',','.');
+ 
+          /*          
+            jumlah kilometer dikalikan dengan 500 
+            setelah itu hasilnya kita konversikan kedalam format kurs rupiah
+          */
+          var tarif = formatNumber(Math.ceil(distance) * 3000); 
+          document.getElementById("billing").value = tarif;
+          document.getElementById("distance").value = results[0].distance.text;
+    
+        }
+      }
+    }
+    // fungsi sederhana untuk mengkonversi bilangan bulat menjadi format kurs rupiah
+    function formatNumber (num) {
+      return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+    }
+ 
+    // menampilkan marker untuk origin dan juga destination
+    function addMarker(location, isDestination) {
+      var icon;
+      if (isDestination) {
+        icon = destinationIcon;
+      } else {
+        icon = originIcon;
+      }
+      geocoder.geocode({'address': location}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          bounds.extend(results[0].geometry.location);
+          map.fitBounds(bounds);
+          var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location,
+            icon: icon
+          });
+          markersArray.push(marker);
+        } else {
+          alert("Terjadi kesalahan: "
+            + status);
+        }
+      });
+    }
+      
+    // menghapus koordinat marker sebelumnya dan menggantinya dengan koordinat yang baru
+    function deleteOverlays() {
+      if (markersArray) {
+        for (i in markersArray) {
+          markersArray[i].setMap(null);
+        }
+        markersArray.length = 0;
+      }
+    }
+  </script>        
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body onload="initialize()">
 <div id="loader">
 <div class="loader-container">
 <img src="{{ URL::asset('petvet/images/xload.png.pagespeed.ic.kE5YiCMdt2.png') }}" alt="" class="loader-site spinner">
@@ -111,15 +247,8 @@
 </ul>
 </li>
 
-<li><a href="{{ url('/appointment') }}">Send Pet</a></li>
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vet Consultation <span class="fa fa-angle-right"></span></a>
-<ul class="dropdown-menu show-left" role="menu">
-<li><a href="{{ url('/shop') }}">Shop Page</a></li>
-<li><a href="{{ url('/shop-detail') }}">Shop Single</a></li>
-<li><a href="{{ url('/shop-checkout') }}">Shop Checkout</a></li>
-<li><a href="{{ url('/shop-chart') }}">Shopping Cart</a></li>
-</ul>
-</li>
+<li><a href="{{ url('/send-pet') }}">Send Pet</a></li>
+<li><a href="{{ url('/vets') }}">Vet Consultation</a></li>
 
 
 </ul>
@@ -138,7 +267,7 @@
 </ul>
 </li>
 
-<li><a href="{{ url('/appointment') }}">Send Pet</a></li>
+<li><a href="{{ url('/send-pet') }}">Send Pet</a></li>
 
 
 
@@ -148,7 +277,6 @@
 </li>
 <li><a href="{{ url('/shop') }}">Shop</a></li>
 <li><a href="{{ url('/blog') }}">Blog</a></li>
-<li><a href="{{ url('/appointment') }}">Appointment</a></li>
 <li><a href="{{ url('/contact')}}">Contact</a></li>
 <li><a href="{{ url('/sign-in')}}">Login</a></li>
 <li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
