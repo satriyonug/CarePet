@@ -47,7 +47,7 @@
 <figure>
 <img alt="" src="{{ URL::asset('petvet/upload/canila.jpg') }}" class="img-responsive">
 <figcaption>
-<p><strong>4 types of pet</strong></p>
+<p><strong>2 types of pet</strong></p>
 <a class="blogging" title="See Details" href="{{ url('/petcare-detail') }}"><i class="fa fa-bars"></i></a>
 </figcaption>
 </figure>

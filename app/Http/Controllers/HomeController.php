@@ -77,6 +77,10 @@ class HomeController extends Controller
 
     }
     
+    public function ceckhoutfinish()
+    {
+        return view('petcare-finish');
+    }
     public function petcarechart()
     {
         return view('petcare-chart');
