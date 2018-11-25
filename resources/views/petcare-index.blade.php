@@ -52,7 +52,7 @@
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Vanilla Petcare</a></h4>
+<h4><a href="{{ url('/petcare-detail') }}" title="">Vanilla Petcare</a></h4>
 <p style="margin-bottom: 15px;">Perumahan Wisma Lidah Kulon A No.89, Lidah Kulon, Lakarsantri, Surabaya</p>
 <div class="rating">
 <i class="fa fa-star"></i>
@@ -72,7 +72,7 @@
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Moeza Pet Care</a></h4>
+<h4><a href="{{ url('/petcare-detail') }}" title="">Moeza Pet Care</a></h4>
 <p style="margin-bottom: 15px;">Medaeng Kulon, Taman, Sidoarjo</p>
 <div class="rating">
 <i class="fa fa-star"></i>
@@ -92,7 +92,7 @@
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Surabayapets Pet Salon and Care</a></h4>
+<h4><a href="{{ url('/petcare-detail') }}" title="">Surabayapets Pet Salon and Care</a></h4>
 <p style="margin-bottom: 15px;">Jl. Semolowaru Elok Blok V No.11, Semolowaru, Sukolilo, Surabaya</p>
 <div class="rating">
 <i class="fa fa-star"></i>
@@ -112,7 +112,7 @@
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Pradika Rabbit Pet Shop, Vet & Care</a></h4>
+<h4><a href="{{ url('/petcare-detail') }}" title="">Pradika Rabbit Pet Shop, Vet & Care</a></h4>
 <p style="margin-bottom: 15px;">Jl. Karah Agung III No.16, Karah, Jambangan, Surabaya</p>
 <div class="rating">
 <i class="fa fa-star"></i>

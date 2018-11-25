@@ -70,9 +70,11 @@ class HomeController extends Controller
         return view('petcare-detail');
     }
     
-    public function petcarecheckout()
+    public function petcarecheckout($id)
     {
-        return view('petcare-checkout');
+        //dd($id);
+        return view('petcare-checkout', compact('id'));
+
     }
     
     public function petcarechart()

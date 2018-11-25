@@ -36,14 +36,31 @@ class PetCareController extends Controller
     public function store(Request $request)
     {
         //
-        $petcare = new PetCare;
-        $petcare->nama = $request->name;
-        $petcare->telpon = $request->telpon;
-        $petcare->alamat = $request->alamat;
-        $petcare->jenis_binatang = $request->jenis_binatang;
-        $petcare->lama_penitipan = $request->lama_penitipan;
-        $petcare->catatan = $request->catatan;
-        $petcare->save();
+        $jml_binatang= $request->jumlah_binatang;
+        // dd($request->jenis_binatang);
+        $durasi=$request->lama_penitipan;
+        if ($request->jenis_binatang == "Cat")
+        {
+            $price=25000;
+        }
+        else if ($request->jenis_binatang == "Dog")
+        {
+            $price=50000;
+        }
+
+        //dd($price);
+        $hrg = $price*$durasi*$jml_binatang;
+        for ($i=0; $i < $jml_binatang ; $i++) { 
+            $petcare = new PetCare;
+            $petcare->nama = $request->name;
+            $petcare->telpon = $request->telpon;
+            $petcare->alamat = $request->alamat;
+            $petcare->jenis_binatang = $request->jenis_binatang;
+            $petcare->lama_penitipan = $request->lama_penitipan;
+            $petcare->catatan = $request->catatan;
+            $petcare->harga = $hrg;
+            $petcare->save();   
+        }
         return redirect('petcare');
     }
 
