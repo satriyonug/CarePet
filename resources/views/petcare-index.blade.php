@@ -41,36 +41,19 @@
 </div>
 </div>
 <div class="row module-wrapper shop-layout text-center">
+
 <div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
 <div class="img-wrap">
 <figure>
-<img alt="" src="{{ URL::asset('petvet/images/petcare.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>3 types of pet</strong></p>
-<a class="blogging" title="See Details" href="{{ url('/petcare-detail') }}"><i class="fa fa-bars"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Beautiful Cat Bed</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/images/petcare.jpg') }}" class="img-responsive">
+<img alt="" src="{{ URL::asset('petvet/upload/canila.jpg') }}" class="img-responsive">
 <figcaption>
 <p><strong>4 types of pet</strong></p>
 <a class="blogging" title="See Details" href="{{ url('/petcare-detail') }}"><i class="fa fa-bars"></i></a>
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Prof Cat House</a></h4>
+<h4><a href="{{ url('/shop-detail') }}" title="">Vanilla Petcare</a></h4>
+<p style="margin-bottom: 15px;">Perumahan Wisma Lidah Kulon A No.89, Lidah Kulon, Lakarsantri, Surabaya</p>
 <div class="rating">
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
@@ -82,14 +65,15 @@
 <div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
 <div class="img-wrap">
 <figure>
-<img alt="" src="{{ URL::asset('petvet/images/petcare.jpg') }}" class="img-responsive">
+<img alt="" src="{{ URL::asset('petvet/upload/moeza.jpg') }}" class="img-responsive">
 <figcaption>
 <p><strong>5 types of pet</strong></p>
 <a class="blogging" title="See Details" href="{{ url('/petcare-detail') }}"><i class="fa fa-bars"></i></a>
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Gorgeous dog house</a></h4>
+<h4><a href="{{ url('/shop-detail') }}" title="">Moeza Pet Care</a></h4>
+<p style="margin-bottom: 15px;">Medaeng Kulon, Taman, Sidoarjo</p>
 <div class="rating">
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
@@ -101,22 +85,45 @@
 <div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
 <div class="img-wrap">
 <figure>
-<img alt="" src="{{ URL::asset('petvet/images/petcare.jpg') }}" class="img-responsive">
+<img alt="" src="{{ URL::asset('petvet/upload/sby.jpg') }}" class="img-responsive">
 <figcaption>
 <p><strong>3 types of pet</strong></p>
 <a class="blogging" title="See Details" href="{{ url('/petcare-detail') }}"><i class="fa fa-bars"></i></a>
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Dog food bowl</a></h4>
+<h4><a href="{{ url('/shop-detail') }}" title="">Surabayapets Pet Salon and Care</a></h4>
+<p style="margin-bottom: 15px;">Jl. Semolowaru Elok Blok V No.11, Semolowaru, Sukolilo, Surabaya</p>
 <div class="rating">
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
-<i class="fa fa-star-o"></i>
+<i class="fa fa-star"></i>
 </div>
 </div>
+<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
+<div class="img-wrap">
+<figure>
+<img alt="" src="{{ URL::asset('petvet/upload/pradika.jpg') }}" class="img-responsive">
+<figcaption>
+<p><strong>1 types of pet</strong></p>
+<a class="blogging" title="See Details" href="{{ url('/petcare-detail') }}"><i class="fa fa-bars"></i></a>
+</figcaption>
+</figure>
+</div>
+<h4><a href="{{ url('/shop-detail') }}" title="">Pradika Rabbit Pet Shop, Vet & Care</a></h4>
+<p style="margin-bottom: 15px;">Jl. Karah Agung III No.16, Karah, Jambangan, Surabaya</p>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+</div>
+
+
 </div>
 <hr class="invis">
 <nav class="pagi clearfix text-center">

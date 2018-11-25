@@ -36,6 +36,15 @@ class PetCareController extends Controller
     public function store(Request $request)
     {
         //
+        $petcare = new PetCare;
+        $petcare->nama = $request->name;
+        $petcare->telpon = $request->telpon;
+        $petcare->alamat = $request->alamat;
+        $petcare->jenis_binatang = $request->jenis_binatang;
+        $petcare->lama_penitipan = $request->lama_penitipan;
+        $petcare->catatan = $request->catatan;
+        $petcare->save();
+        return redirect('petcare');
     }
 
     /**
