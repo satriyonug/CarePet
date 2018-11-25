@@ -37,3 +37,4 @@ Route::get('/sign-in', 'HomeController@signin');
 Route::get('/chat', 'HomeController@chat');
 Route::get('/success', 'HomeController@success');
 Route::post('/appointment/create', 'SendPetController@store');
+Route::resource('/indexAdmin', 'AdminModelController');
