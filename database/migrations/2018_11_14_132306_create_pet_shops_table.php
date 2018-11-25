@@ -15,15 +15,15 @@ class CreatePetShopsTable extends Migration
     {
         Schema::create('pet_shops', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama',100);
-            $table->string('alamat',100);
-            $table->string('kota',100);
-            $table->string('provinsi',100);
-            $table->string('kodepos',10);
-            $table->string('telpon',20);
-            $table->integer('jumlah_barang');
-            $table->string('catatan',500);
-            $table->string('harga',10);
+            $table->string('nama',100)->nullable();
+            $table->string('alamat',100)->nullable();
+            $table->string('kota',100)->nullable();
+            $table->string('provinsi',100)->nullable();
+            $table->string('kodepos',10)->nullable();
+            $table->string('telpon',20)->nullable();
+            $table->integer('jumlah_barang')->nullable();
+            $table->string('catatan',500)->nullable();
+            $table->string('harga',10)->nullable();
             $table->timestamps();
         });
     }

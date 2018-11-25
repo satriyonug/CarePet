@@ -15,13 +15,13 @@ class CreatePetCaresTable extends Migration
     {
         Schema::create('pet_cares', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama',100);
-            $table->string('telpon',20);
-            $table->string('alamat',100);
-            $table->string('jenis_binatang',100);
-            $table->integer('lama_penitipan');
-            $table->string('catatan',500);
-            $table->string('harga',10);
+            $table->string('nama',100)->nullable();
+            $table->string('telpon',20)->nullable();
+            $table->string('alamat',100)->nullable();
+            $table->string('jenis_binatang',100)->nullable();
+            $table->integer('lama_penitipan')->nullable();
+            $table->string('catatan',500)->nullable();
+            $table->string('harga',10)->nullable();
             $table->timestamps();
         });
     }
