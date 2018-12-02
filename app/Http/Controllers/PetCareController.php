@@ -48,7 +48,7 @@ class PetCareController extends Controller
             $price=50000;
         }
 
-        //dd($price);
+        // dd($price);
         $hrg = $price*$durasi*$jml_binatang;
         for ($i=0; $i < $jml_binatang ; $i++) { 
             $petcare = new PetCare;
@@ -61,7 +61,10 @@ class PetCareController extends Controller
             $petcare->harga = $hrg;
             $petcare->save();   
         }
-        return redirect('petcare');
+        $order = array('price' => $price, 'durasi' => $durasi, 'jml' => $jml_binatang, 'harga' => $hrg);
+        // dd($order);
+        return view('petcare-finish', compact('order'));
+        // return view('petcare-checkout', compact('id'));
     }
 
     /**
