@@ -90,63 +90,67 @@
                   <table id="cart-table" class="table table-condensed">
                      <thead>
                         <tr>
-                           <th>Action</th> 
+                           <!-- <th>Action</th>  -->
                            <th>Image</th>
                            <th>Product</th>
-                           <th>Price</th>
-                           <th>Quanity</th>
-                           <th>Total</th>
+                           <th>Price per Day</th>
+                           <!-- <th>Quanity</th> -->
+                           <!-- <th>Total</th> -->
                         </tr>
                      </thead>
                      <tbody>
-                        <tr>
-                           <th class="product-remove">
-                              <a class="remove" title="Remove this product" href="#">×</a>
-                           </th>
-                           <th>
-                              <div class="media">
-                                 <div class="relative">
-                                    <a href="shop-single.html" title="">
-                                    <img src="{{ URL::asset('petvet/upload/xshop_05.jpg.pagespeed.ic.7zLQOUZl_L.jpg') }}" alt="">
-                                    </a>
+                        @if (($id) == 1)
+                           <tr>
+                              <!-- <th class="product-remove">
+                                 <a class="remove" title="Remove this product" href="#">×</a>
+                              </th> -->
+                               
+                              <th>
+                                 <div class="media">
+                                    <div class="relative">
+                                       <a href="shop-single.html" title="">
+                                       <img src="{{ URL::asset('petvet/upload/xshop_05.jpg.pagespeed.ic.7zLQOUZl_L.jpg') }}" alt="">
+                                       </a>
+                                    </div>
                                  </div>
-                              </div>
-                           </th>
-                           <th>
-                              <a href="shop-single.html">Cat Cage - #000415</a>
-                           </th>
-                           <td>Rp. 25.000</td>
-                           <td>
-                              2
-                           </td>
-                           <td>
-                              Rp. 50.000
-                           </td>
-                        </tr>
-                        <tr>
-                           <th class="product-remove">
-                              <a class="remove" title="Remove this product" href="#">×</a>
-                           </th>
-                           <th>
-                              <div class="media">
-                                 <div class="relative">
-                                    <a href="shop-single.html" title="">
-                                    <img src="{{ URL::asset('petvet/upload/xshop_03.jpg.pagespeed.ic.IONcGIjklL.jpg') }}" alt="">
-                                    </a>
+                              </th>
+                              <th>
+                                 <a href="shop-single.html">Cat Cage - #000415</a>
+                              </th>
+                              <td>Rp. 25.000</td>
+<!--                               <td>
+                                 2
+                              </td> -->
+<!--                               <td>
+                                 Rp. 50.000
+                              </td> -->
+                           </tr>
+                        @elseif (($id)==2)
+                           <tr>
+                              <th class="product-remove">
+                                 <a class="remove" title="Remove this product" href="#">×</a>
+                              </th>
+                              <th>
+                                 <div class="media">
+                                    <div class="relative">
+                                       <a href="shop-single.html" title="">
+                                       <img src="{{ URL::asset('petvet/upload/xshop_03.jpg.pagespeed.ic.IONcGIjklL.jpg') }}" alt="">
+                                       </a>
+                                    </div>
                                  </div>
-                              </div>
-                           </th>
-                           <th>
-                              <a href="shop-single.html">Small Dog-Cage - #0344</a>
-                           </th>
-                           <td>Rp. 50.000</td>
-                           <td>
-                              1
-                           </td>
-                           <td>
-                              Rp. 50.000
-                           </td>
-                        </tr>
+                              </th>
+                              <th>
+                                 <a href="shop-single.html">Small Dog-Cage - #0344</a>
+                              </th>
+                              <td>Rp. 50.000</td>
+<!--                               <td>
+                                 1
+                              </td> -->
+<!--                               <td>
+                                 Rp. 50.000
+                              </td> -->
+                           </tr>
+                        @endif
                      </tbody>
                   </table>
                </div>
@@ -160,7 +164,7 @@
                      <button type="submit" class="pull-right btn btn-primary">Update Cart</button>
                   </form>
                </div> -->
-               <div class="totalarea margin-top row">
+<!--                <div class="totalarea margin-top row">
 
                   <div class="col-md-6">
                      <div class="totalprice">
@@ -170,9 +174,9 @@
                         <p>Total : Rp. 100.000</p>
                      </div>
                   </div>
-               </div>
-               <div class="totalarea margin-top row">
-                  <!-- <form id="payment" class="clearfix"> -->
+               </div> -->
+<!--                <div class="totalarea margin-top row">
+                  <form id="payment" class="clearfix">
                      <label class="checkbox payment-method inline">
                      <input type="checkbox" id="customCheck1" value="option1" class=""> Direct Bank Transfer
                      <span class="custom2">Make your payment directly into our bank account. Please use your Order ID as the payment reference. .</span>
@@ -187,9 +191,9 @@
                      <label class="checkbox payment-method inline">
                      <input type="checkbox" id="customCheck3" value="option3"> Google Checkout
                      </label>
-                     <!-- <a class="btn btn-primary pull-right" href="#">PLACE AN ORDER</a> -->
-                  <!-- </form> -->
-               </div>
+                     <a class="btn btn-primary pull-right" href="#">PLACE AN ORDER</a>
+                  </form>
+               </div> -->
                <div style="text-align: center;">
                   <button style="" type="submit" class="btn btn-primary">Place an order</button>
                </div>

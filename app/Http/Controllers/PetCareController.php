@@ -61,12 +61,10 @@ class PetCareController extends Controller
             $petcare->harga = $hrg;
             $petcare->save();   
         }
-        // dd($price);
-        // dd($durasi);
-        // dd($jml_binatang);
-        // dd($hrg);
         $order = array('price' => $price, 'durasi' => $durasi, 'jml' => $jml_binatang, 'harga' => $hrg);
-        return redirect('petcare-finish')->with($order);
+        // dd($order);
+        return view('petcare-finish', compact('order'));
+        // return view('petcare-checkout', compact('id'));
     }
 
     /**
