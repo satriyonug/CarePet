@@ -24,10 +24,6 @@ class AdminModelController extends Controller
     {
         return view('docboard');
     }
-    public function index()
-    {
-        return view('adminDashboard');
-    }
       public function mitraindex()
     {
         return view('mitraindex');
