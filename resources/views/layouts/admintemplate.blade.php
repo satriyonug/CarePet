@@ -12,7 +12,7 @@
 <meta name="description" content="CAREPET - We care your about PET">
 <meta name="author" content="">
 
-<link rel="icon" href="{{ URL::asset('backend/light/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ URL::asset('backend/light/assets/favicon.ico') }}" type="image/x-icon">
 <!-- VENDOR CSS -->
 <link rel="stylesheet" href="{{ URL::asset('backend/light/assets/vendor/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('backend/light/assets/vendor/font-awesome/css/font-awesome.min.css') }}">
@@ -24,6 +24,10 @@
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{{ URL::asset('backend/light/assets/css/main.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('backend/light/assets/css/color_skins.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('backend/light/assets/css/chatapp.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('backend/light/assets/vendor/fullcalendar/fullcalendar.min.css') }}">
+
+
 </head>
 
 <body class="theme-cyan">
@@ -40,7 +44,7 @@
             </div>
 
             <div class="navbar-brand">
-                <a href="index.html"><img src="https://thememakker.com/templates//lucid/hospital/assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+                <a href="index.html"><img src="{{ URL::asset('backend/light/assets/logo.png') }}" alt="Logo" class="img-responsive logo"></a>                
             </div>
             
             <div class="navbar-right">
@@ -290,7 +294,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                    <img class="media-object " src="{{ URL::asset('backend/light/assets/images/xs/avatar4.jpg') }}" alt="">
                                     <div class="media-body">
                                         <span class="name">Dr. Chris Fox</span>
                                         <span class="message">Dentist</span>
@@ -302,7 +306,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <img class="media-object " src="{{ URL::asset('backend/light/assets/images/xs/avatar5.jpg') }}" alt="">
                                     <div class="media-body">
                                         <span class="name">Dr. Joge Lucky</span>
                                         <span class="message">Gynecologist</span>
@@ -314,7 +318,7 @@
                         <li class="offline">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <img class="media-object " src="{{ URL::asset('backend/light/assetsassets/images/xs/avatar2.jpg') }}" alt="">
                                     <div class="media-body">
                                         <span class="name">Dr. Isabella</span>
                                         <span class="message">CEO, WrapTheme</span>
@@ -326,7 +330,7 @@
                         <li class="offline">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                    <img class="media-object " src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" alt="">
                                     <div class="media-body">
                                         <span class="name">Dr. Folisise Chosielie</span>
                                         <span class="message">Physical Therapy</span>
@@ -338,7 +342,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                    <img class="media-object " src="{{ URL::asset('backend/light/assets/images/xs/avatar3.jpg') }}" alt="">
                                     <div class="media-body">
                                         <span class="name">Dr. Alexander</span>
                                         <span class="message">Audiology</span>

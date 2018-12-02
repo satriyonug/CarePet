@@ -7,7 +7,7 @@
                     <div class="col-lg-6 col-md-8 col-sm-12">
                         <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Doctor Schedule</h2>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>                            
+                            <li class="breadcrumb-item"><a href="/"><i class="icon-home"></i></a></li>                            
                             <li class="breadcrumb-item">Doctor</li>
                             <li class="breadcrumb-item active">Doctor Schedule</li>
                         </ul>
@@ -55,7 +55,7 @@
                     <div class="card profile-header">
                         <div class="body">
                             <div class="text-center">
-                                <img src="assets/images/user.png" class="rounded-circle m-b-15" alt="">
+                                <img src="{{ URL::asset('backend/light/assets/images/user.png') }}" class="rounded-circle m-b-15" alt="">
                                 <div>
                                     <h4 class="m-b-0">dr. <strong>Dhea</strong> Hana</h4>
                                     <span>Sp.B</span>
@@ -88,11 +88,11 @@
                             <hr>
                             <h6>Team</h6>
                             <ul class="list-unstyled team-info m-t-20">                                
-                                <li><img src="assets/images/xs/avatar1.jpg" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
-                                <li><img src="assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
-                                <li><img src="assets/images/xs/avatar3.jpg" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
-                                <li><img src="assets/images/xs/avatar4.jpg" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
-                                <li><img src="assets/images/xs/avatar5.jpg" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
+                                <li><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
+                                <li><img src="{{ URL::asset('backend/light/assets/images/xs/avatar2.jpg') }}" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
+                                <li><img src="{{ URL::asset('backend/light/assets/images/xs/avatar3.jpg') }}" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
+                                <li><img src="{{ URL::asset('backend/light/assets/images/xs/avatar4.jpg') }}" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
+                                <li><img src="{{ URL::asset('backend/light/assets/images/xs/avatar5.jpg') }}" data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar"></li>
                             </ul>
                         </div>
                     </div>
@@ -110,42 +110,42 @@
                             </div>
                             <ul class="list-unstyled chat-list mt-2 mb-0">
                                 <li class="clearfix">
-                                    <img src="assets/images/xs/avatar1.jpg" alt="avatar" />
+                                    <img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" alt="avatar" />
                                     <div class="about">
                                         <div class="name">Dr. Vincent Porter</div>
                                         <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>                                            
                                     </div>
                                 </li>
                                 <li class="clearfix active">
-                                    <img src="assets/images/xs/avatar2.jpg" alt="avatar" />
+                                    <img src="{{ URL::asset('backend/light/assets/images/xs/avatar2.jpg') }}" alt="avatar" />
                                     <div class="about">
                                         <div class="name">Dr. Aiden Chavez</div>
                                         <div class="status"> <i class="fa fa-circle online"></i> online </div>
                                     </div>
                                 </li>
                                 <li class="clearfix">
-                                    <img src="assets/images/xs/avatar3.jpg" alt="avatar" />
+                                    <img src="{{ URL::asset('backend/light/assets/images/xs/avatar3.jpg') }}" alt="avatar" />
                                     <div class="about">
                                         <div class="name">Dr. Mike Bing</div>
                                         <div class="status"> <i class="fa fa-circle online"></i> online </div>
                                     </div>
                                 </li>                                    
                                 <li class="clearfix">
-                                    <img src="assets/images/xs/avatar7.jpg" alt="avatar" />
+                                    <img src="{{ URL::asset('backend/light/assets/images/xs/avatar7.jpg') }}" alt="avatar" />
                                     <div class="about">
                                         <div class="name">Dr. Christian Kelly</div>
                                         <div class="status"> <i class="fa fa-circle offline"></i> left 10 hours ago </div>
                                     </div>
                                 </li>
                                 <li class="clearfix">
-                                    <img src="assets/images/xs/avatar8.jpg" alt="avatar" />
+                                    <img src="{{ URL::asset('backend/light/assets/images/xs/avatar8.jpg') }}" alt="avatar" />
                                     <div class="about">
                                         <div class="name">Dr. Monica Ward</div>
                                         <div class="status"> <i class="fa fa-circle online"></i> online </div>
                                     </div>
                                 </li>
                                 <li class="clearfix">
-                                    <img src="assets/images/xs/avatar9.jpg" alt="avatar" />
+                                    <img src="{{ URL::asset('backend/light/assets/images/xs/avatar9.jpg') }}" alt="avatar" />
                                     <div class="about">
                                         <div class="name">Dr. Dean Henry</div>
                                         <div class="status"> <i class="fa fa-circle offline"></i> offline since Oct 28 </div>
@@ -158,7 +158,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
-                                            <img src="assets/images/xs/avatar2.jpg" alt="avatar" />
+                                            <img src="{{ URL::asset('backend/light/assets/images/xs/avatar2.jpg') }}" alt="avatar" />
                                         </a>
                                         <div class="chat-about">
                                             <h6 class="m-b-0">dr. Sugeng</h6>
@@ -178,7 +178,7 @@
                                     <li class="clearfix">
                                         <div class="message-data text-right">
                                             <span class="message-data-time" >10:10 AM, Today</span>
-                                            <img src="assets/images/xs/avatar7.jpg" alt="avatar">
+                                            <img src="{{ URL::asset('backend/light/assets/images/xs/avatar7.jpg') }}" alt="avatar">
                                         </div>
                                         <div class="message other-message float-right"> Halo Pak Sugeng </div>
                                     </li>

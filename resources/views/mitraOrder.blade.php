@@ -8,7 +8,7 @@
                     <div class="col-lg-6 col-md-8 col-sm-12">
                         <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Dashboard</h2>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>                            
+                            <li class="breadcrumb-item"><a href="/"><i class="icon-home"></i></a></li>                            
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ul>
                     </div>            
@@ -75,7 +75,7 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td><img src="assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>John Pantau</span></td>
+                                            <td><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" class="rounded-circle width30 m-r-15" alt="profile-image"><span>John Pantau</span></td>
                                             <td><span class="text-info">Jl. Keputih Tegal Timur</span></td>
                                             <td>Sept 13, 2018</td>
                                             <td>Sept 16, 2018</td>
@@ -88,7 +88,7 @@
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td><img src="assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Riko Kucing</span></td>
+                                            <td><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Riko Kucing</span></td>
                                             <td><span class="text-info">Jl. Keputih Tegal Barat</span></td>
                                             <td>Sept 13, 2018</td>
                                             <td>Sept 22, 2018</td>
@@ -101,7 +101,7 @@
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td><img src="assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Otto Budiman</span></td>
+                                            <td><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Otto Budiman</span></td>
                                             <td><span class="text-info">Jl. Keputih Tegal Tenggara</span></td>
                                             <td>Sept 13, 2018</td>
                                             <td>Sept 23, 2018</td>
@@ -158,11 +158,11 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td><img src="assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>John Pantau</span></td>
-                                            <td><span class="text-info">Jl. Keputih Tegal Timur</span></td>
+                                            <td><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" class="rounded-circle width30 m-r-15" alt="profile-image"><span>John Pantau</span></td>
+                                            <td><span class="text-info">Ma</span></td>
                                             <td>Sept 13, 2018</td>
                                             <td>Sept 16, 2018</td>
-                                            <td>Mitra Kurir</td>
+                                            <td><span class="badge badge-success">MITRA KURIR</span></td>
                                             <td>
                                                    RP50.000 
                                             </td>
@@ -174,30 +174,38 @@
  -->
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td><img src="assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Riko Kucing</span></td>
-                                            <td><span class="text-info">Jl. Keputih Tegal Barat</span></td>
+                                            <td>1</td>
+                                            <td><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" class="rounded-circle width30 m-r-15" alt="profile-image"><span>John Pantau</span></td>
+                                            <td><span class="text-info">Pakan Anjing Galak Super 250gr</span></td>
                                             <td>Sept 13, 2018</td>
-                                            <td>Sept 22, 2018</td>
-                                            <td><span class="badge badge-warning">MEDIUM</span></td>
-                                            <td><div class="progress progress-xs">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">100% Complete</span> </div>
-                                                </div>
+                                            <td>Sept 16, 2018</td>
+                                            <td><span class="badge badge-success">MITRA KURIR</span></td>
+                                            <td>
+                                                   RP50.000 
                                             </td>
-                                            <td><span class="badge badge-default">Discharge</span></td>
+                                            <td> <button type="button" class="btn btn-success"><i class="fa fa-check-circle"></i> <span>Accept</span></button>
+                                            <button type="button" class="btn btn-warning"><i class="fa fa-warning"></i> <span>Tolak</span></button>
+                                            </td>
+
+<!--    IF ORDER ACEPTED                                         <td><span class="badge badge-default">in Progress</span></td>
+ -->
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td><img src="assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Otto Budiman</span></td>
-                                            <td><span class="text-info">Jl. Keputih Tegal Tenggara</span></td>
+                                            <td><img src="{{ URL::asset('backend/light/assets/images/xs/avatar1.jpg') }}" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Otto Budiman</span></td>
+                                            <td><span class="text-info">Pakan Anjing Galak Super 250gr</span></td>
                                             <td>Sept 13, 2018</td>
                                             <td>Sept 23, 2018</td>
-                                            <td><span class="badge badge-warning">MEDIUM</span></td>
-                                            <td><div class="progress progress-xs">
-                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"> <span class="sr-only">15% Complete</span> </div>
-                                                </div>
+                                            <td><span class="badge badge-success">MITRA KURIR</span></td>
+                                            <td>
+                                                   RP50.000 
                                             </td>
-                                            <td><span class="badge badge-success">Admit</span></td>
+                                            <td> <button type="button" class="btn btn-success"><i class="fa fa-check-circle"></i> <span>Accept</span></button>
+                                            <button type="button" class="btn btn-warning"><i class="fa fa-warning"></i> <span>Tolak</span></button>
+                                            </td>
+
+<!--    IF ORDER ACEPTED                                         <td><span class="badge badge-default">in Progress</span></td>
+ -->
                                         </tr>
                                         
                                     </tbody>

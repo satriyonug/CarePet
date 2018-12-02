@@ -40,5 +40,5 @@ Route::get('/cart', 'CartController@create');
 Route::resource('/adminindex', 'AdminModelController');
 Route::get('/docchat', 'AdminModelController@docchat');
 Route::get('/docboard', 'AdminModelController@docboard');
-Route::get('/mitraorder', 'AdminModelController@mitrorder');
+Route::get('/mitraorder', 'AdminModelController@mitraorder');
 Route::get('/mitraindex', 'AdminModelController@mitraindex');
