@@ -15,6 +15,7 @@ class PetShopController extends Controller
     public function index()
     {
         //
+		
     }
 
     /**
@@ -36,6 +37,24 @@ class PetShopController extends Controller
     public function store(Request $request)
     {
         //
+		$price=20000;
+		$jml_barang= $request->jumlah_barang;
+		$harga = $price*$jml_barang;
+        for ($i=0; $i < $jml_barang ; $i++) { 
+		$petshop = new PetShop;
+        $petshop->nama = $request->nama;
+        $petshop->alamat = $request->alamat;
+		$petshop->kota = $request->kota;
+		$petshop->provinsi = $request->provinsi;
+		$petshop->kodepos = $request->kodepos;
+		$petshop->telpon = $request->telpon;
+        $petshop->jumlah_barang = $request->jumlah_barang;
+		$petshop->harga = $harga;
+        $petshop->catatan = $request->catatan;
+        $petshop->save();
+		}
+		
+		 return redirect('shop');
     }
 
     /**

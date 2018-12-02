@@ -48,12 +48,12 @@
 <figure>
 <img alt="" src="{{ URL::asset('petvet/upload/xshop_01.jpg.pagespeed.ic.tEfrtxhhVo.jpg') }}" class="img-responsive">
 <figcaption>
-<p><strong>$43.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
+<p><strong>Rp 645.000,00</strong></p>
+<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail/1') }}"><i class="fa fa-shopping-cart"></i></a>
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Beautiful Cat Bed</a></h4>
+<h4><a href="{{ url('/shop-detail/1') }}" title="">Tempat Tidur Kucing</a></h4>
 <div class="rating">
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
@@ -67,12 +67,12 @@
 <figure>
 <img alt="" src="{{ URL::asset('petvet/upload/xshop_02.jpg.pagespeed.ic.c2WuvOxE4K.jpg') }}" class="img-responsive">
 <figcaption>
-<p><strong>$12.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
+<p><strong>Rp 180.000,00</strong></p>
+<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail/2') }}"><i class="fa fa-shopping-cart"></i></a>
 </figcaption>
 </figure>
 </div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Prof Cat House</a></h4>
+<h4><a href="{{ url('/shop-detail/2') }}" title="">Tempat Tidur Tingkat Kucing </a></h4>
 <div class="rating">
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
@@ -81,196 +81,7 @@
 <i class="fa fa-star"></i>
 </div>
 </div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_03.jpg.pagespeed.ic.IONcGIjklL.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$55.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Gorgeous dog house</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_04.jpg.pagespeed.ic.SDayx1DpGB.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$124.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Dog food bowl</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star-o"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_05.jpg.pagespeed.ic.7zLQOUZl_L.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$43.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Beautiful Cat Bed</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_06.jpg.pagespeed.ic.odvCiC7IZQ.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$12.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Prof Cat House</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_07.jpg.pagespeed.ic.0Nl_iwjSRg.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$55.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Gorgeous dog house</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_08.jpg.pagespeed.ic.zou2F0j3sX.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$124.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Dog food bowl</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star-o"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_09.jpg.pagespeed.ic.ABw_vz3wn4.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$43.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Beautiful Cat Bed</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_10.jpg.pagespeed.ic.kB0PrUYJF7.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$12.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Prof Cat House</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_11.jpg.pagespeed.ic.cElt2PDR7X.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$55.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Gorgeous dog house</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</div>
-</div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
-<div class="img-wrap">
-<figure>
-<img alt="" src="{{ URL::asset('petvet/upload/xshop_12.jpg.pagespeed.ic.NS_1sIYAoi.jpg') }}" class="img-responsive">
-<figcaption>
-<p><strong>$124.00</strong></p>
-<a class="blogging" title="Add to Cart" href="{{ url('/shop-detail') }}"><i class="fa fa-shopping-cart"></i></a>
-</figcaption>
-</figure>
-</div>
-<h4><a href="{{ url('/shop-detail') }}" title="">Dog food bowl</a></h4>
-<div class="rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star-o"></i>
-</div>
-</div>
+
 </div>
 <hr class="invis">
 <nav class="pagi clearfix text-center">
