@@ -16,9 +16,9 @@ class AdminModelController extends Controller
     {
         return view('adminDashboard');
     }
-    public function docindex()
+    public function docchat()
     {
-        return view('docindex');
+        return view('docchat');
     }
     public function docboard()
     {
@@ -27,6 +27,15 @@ class AdminModelController extends Controller
     public function index()
     {
         return view('adminDashboard');
+    }
+      public function mitraindex()
+    {
+        return view('adminDashboard');
+    }
+      public function mitraorder()
+    {
+        return view('adminDashboard');
+
     }
     /**
      * Show the form for creating a new resource.
