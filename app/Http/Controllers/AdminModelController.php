@@ -14,9 +14,20 @@ class AdminModelController extends Controller
      */
     public function index()
     {
-                return view('adminDashboard');
+        return view('adminDashboard');
     }
-
+    public function docindex()
+    {
+        return view('docindex');
+    }
+    public function docboard()
+    {
+        return view('docboard');
+    }
+    public function index()
+    {
+        return view('adminDashboard');
+    }
     /**
      * Show the form for creating a new resource.
      *
