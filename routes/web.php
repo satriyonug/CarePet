@@ -38,7 +38,7 @@ Route::get('/sign-in', 'HomeController@signin');
 Route::get('/chat', 'HomeController@chat');
 Route::get('/cart', 'CartController@create');
 Route::resource('/adminindex', 'AdminModelController');
-Route::get('/docindex', 'AdminModelController@docindex');
+Route::get('/docchat', 'AdminModelController@docchat');
 Route::get('/docboard', 'AdminModelController@docboard');
 Route::get('/mitraorder', 'AdminModelController@mitrorder');
 Route::get('/mitraindex', 'AdminModelController@mitraindex');

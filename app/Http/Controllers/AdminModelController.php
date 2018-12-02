@@ -30,11 +30,11 @@ class AdminModelController extends Controller
     }
       public function mitraindex()
     {
-        return view('adminDashboard');
+        return view('mitraindex');
     }
       public function mitraorder()
     {
-        return view('adminDashboard');
+        return view('mitraorder');
 
     }
     /**
