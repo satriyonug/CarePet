@@ -26,7 +26,6 @@
 <script src="{{ URL::asset('petvet/js/modernizer.js.pagespeed.jm.1UdTGnoJUM.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/chat.css') }}" media="screen"/>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<<<<<<< Updated upstream
   <style type="text/css">
     #map {
       height: 480px;
@@ -164,14 +163,12 @@
       }
     }
   </script>        
-=======
 <style>
 input[type="radio"] {
     display:block;
 }
 
 </style>
->>>>>>> Stashed changes
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
