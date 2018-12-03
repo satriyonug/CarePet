@@ -36,16 +36,16 @@ class HomeController extends Controller
         return view('shop');
     }
 
-    public function shopdetail()
+    public function shopdetail($id)
     {
-        return view('shop-detail');
+        return view('shop-detail',compact('id'));
     }
 
-    public function shopcheckout()
+    public function shopcheckout($id)
     {
-        return view('shop-checkout');
+        return view('shop-checkout',compact('id'));
     }
-
+	
     public function shopchart()
     {
         return view('shop-chart');

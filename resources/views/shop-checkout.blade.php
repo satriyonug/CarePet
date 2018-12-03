@@ -29,48 +29,40 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<form method="post" class="shopform">
-<div class="row">
+<form action="{{ url('/shop-checkout/create') }}" method="post" class="shopform" enctype="multipart/form-data">
+    @csrf
 <div class="col-md-6">
 <div class="widget-title">
 <h4>Billing Details</h4>
 </div>
 <div class="row">
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<label>First Name *</label>
-<input type="text" name="name" id="name" class="form-control" placeholder="First Name">
+<label>Nama *</label>
+<input type="text" name="nama" id="nama" class="form-control" placeholder="Name">
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<label>Alamat *</label>
+<input type="text" name="alamat" id="alamat" class="form-control" placeholder="Address">
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<label>Kota *</label>
+<input type="text" name="kota" id="kota" class="form-control" placeholder="Kota">
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<label>Last Name *</label>
-<input type="text" name="name" id="name1" class="form-control" placeholder="Last Name">
-</div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<label>Company Name</label>
-<input type="text" name="name" id="name2" class="form-control" placeholder="Company Name">
-</div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<label>Address *</label>
-<input type="text" name="name" id="name3" class="form-control" placeholder="Address Line 1">
-<label>Address Line 2</label>
-<input type="text" name="name" id="name4" class="form-control" placeholder="Address Line 2">
-</div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<label>Town / City *</label>
-<input type="text" name="name" id="name5" class="form-control" placeholder="Town / City">
+<label>Provinsi *</label>
+<input type="text" name="provinsi" id="provinsi" class="form-control" placeholder="Provinsi">
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<label>County *</label>
-<input type="text" name="name" id="name6" class="form-control" placeholder="County">
-</div>
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<label>Zip Code *</label>
-<input type="text" name="name" id="name7" class="form-control" placeholder="Zip Code">
+<label>Kode Pos *</label>
+<input type="text" name="kodepos" id="kodepos" class="form-control" placeholder="Kode Pos">
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<label>Email *</label>
-<input type="text" name="name" id="name8" class="form-control" placeholder="Email Address">
 <label>Phone Number *</label>
-<input type="text" name="name" id="name9" class="form-control" placeholder="Phone Number">
+<input type="text" name="telpon" id="telpon" class="form-control" placeholder="Phone Number">
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<label>Jumlah Barang *</label>
+<input type="number" name="jumlah_barang" id="jumlah_barang" class=" form-control" placeholder="Jumlah Barang"  min="0" max="100">
 </div>
 </div>
 </div>
@@ -78,12 +70,12 @@
 <div class="widget-title">
 <h4>Shipping to another address</h4>
 </div>
-<label>Other Notes</label>
-<textarea rows="6" class="form-control" placeholder="Add extra notes..."></textarea>
+<label>Catatan</label>
+<textarea name="catatan" id="catatan" rows="6" class="form-control" placeholder="Add extra notes..."></textarea>
 </div>
 </div>
-</form>
-<hr class="invis">
+
+<!--<hr class="invis">
 <div class="table-responsive margin-top">
 <table id="cart-table" class="table table-condensed">
 <thead>
@@ -208,12 +200,16 @@ $21.00
 <label class="checkbox payment-method inline">
 <input type="checkbox" id="customCheck3" value="option3"> Google Checkout
 </label>
-<a class="btn btn-primary pull-right" href="#">PLACE AN ORDER</a>
+
 </form>
+</div>-->
 </div>
 </div>
 </div>
+ <div style="text-align: center;">
+  <button style="" type="submit" class="btn btn-primary">Place an order</button>
 </div>
+</form>
 </section>
 
 @endsection

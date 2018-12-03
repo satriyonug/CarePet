@@ -26,6 +26,7 @@
 <script src="{{ URL::asset('petvet/js/modernizer.js.pagespeed.jm.1UdTGnoJUM.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('petvet/css/chat.css') }}" media="screen"/>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
   <style type="text/css">
     #map {
       height: 480px;
