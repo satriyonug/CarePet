@@ -88,6 +88,11 @@
         avoidTolls: false
       }, callback);
     }
+
+    function jarak() {
+		      document.getElementById("billing").value = 50000;
+          document.getElementById("distance").value = 10 km;
+    }
       
     // responde dari Googlemaps Distance Matrix akan diolah dan di kirim ke output HTML
     function callback(response, status) {
@@ -117,7 +122,7 @@
             jumlah kilometer dikalikan dengan 500 
             setelah itu hasilnya kita konversikan kedalam format kurs rupiah
           */
-          var tarif = formatNumber(Math.ceil(distance) * 3000); 
+          var tarif = formatNumber(Math.ceil(distance) * 5000); 
           document.getElementById("billing").value = tarif;
           document.getElementById("distance").value = results[0].distance.text;
     
@@ -254,7 +259,7 @@ input[type="radio"] {
 </ul>
 </li>
 
-<li><a href="{{ url('/send-pet') }}">Send Pet</a></li>
+<li><a href="{{ url('/appointment') }}">Send Pet</a></li>
 <li><a href="{{ url('/vets') }}">Vet Consultation</a></li>
 
 
@@ -274,7 +279,7 @@ input[type="radio"] {
 </ul>
 </li>
 
-<li><a href="{{ url('/send-pet') }}">Send Pet</a></li>
+<li><a href="{{ url('/appointment') }}">Send Pet</a></li>
 
 
 
@@ -285,7 +290,11 @@ input[type="radio"] {
 <li><a href="{{ url('/shop') }}">Shop</a></li>
 <li><a href="{{ url('/blog') }}">Blog</a></li>
 <li><a href="{{ url('/contact')}}">Contact</a></li>
+@if (session('email'))
+<li>Satriyo</li>
+@else
 <li><a href="{{ url('/sign-in')}}">Login</a></li>
+@endif
 <li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
 
 </ul>

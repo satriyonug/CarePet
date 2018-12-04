@@ -63,7 +63,7 @@ class PetCareController extends Controller
         }
         $order = array('price' => $price, 'durasi' => $durasi, 'jml' => $jml_binatang, 'harga' => $hrg);
         // dd($order);
-        return view('petcare-finish', compact('order'));
+        return view('petcare-index', compact('order'));
         // return view('petcare-checkout', compact('id'));
     }
 

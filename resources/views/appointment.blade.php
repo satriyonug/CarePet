@@ -92,46 +92,85 @@
 									<input id="destinations" name="destinations" type="text" placeholder="Destination" class="form-control" required>
 								</div>
                 
-								<div class="input-field col s6">
+								<!-- <div class="input-field col s6">
 									<a class="btn btn-success" onclick="return calculateDistances()">Check Price</a>
 								</div>
 
 								<div class="col-md-6" >
 									<label class="sr-only">Jarak</label>
-									<input id="distance" name="distance" type="text" placeholder="Distance" class="form-control">
+									<input id="distance" name="distance" type="text" placeholder="Distance" class="form-control" value="">
 								</div>
 
 								<div class="col-md-6" >
 									<label class="sr-only">Tarif</label>
-									<input id="billing" name="billing" type="text" placeholder="Price" class="form-control">
-								</div>
+									<input id="billing" name="billing" type="text" placeholder="Price" class="form-control" value="">
+								</div> -->
 
 								<div class="col-md-12">
 									<textarea id="text" name="text" placeholder="Add extra notes" class="form-control"></textarea>
 								</div>
 								<div class="col-md-12">
-									<button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-block btn-lg">Send Now</button>
+									<button type="button" data-toggle="modal" data-target="#modalku"  class="btn btn-primary btn-block btn-lg">Send Now</button>
 								</div>
               </fieldset>
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Confirmation Transaction</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+			  <div class="modal fade" id="modalku" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Transaksi</h4>
+        </div>
+        <div class="modal-body">
+          <p>Pengirim :</p>
+		  <p>Satriyo - 081235923003</p>
+          <p>Penerima :</p>
+		  <p>Nugroho - 087883568542</p>
+		  <p>Alamat :</p>
+		  <p>Informatika ITS, Surabaya</p>
+		  <p>Tujuan :</p>
+		  <p>Tunjungan Plaza, Surabaya</p>
+		  <p>Harga :</p>
+		  <p>Rp 50.000</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default" >Check Out</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+              
+			<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Syarat & Ketentuan</h4>
+        </div>
+        <div class="modal-body">
+          <h6>Layanan Send Pet dan Pet Care</h6>
+          <p>1. Hewan dalam keadaan sehat</p>
+          <p>2. Hewan tidak kutuan atau sakit kulit (Kalau memang ada, bisa langsung diinfokan dari awal)</p>
+          <p>3. Membawa buku vaksin (Pengecekan vaksin)</p>
+          <p>4. Penitipan dihitung dari hari pertama hewan dititipkan</p>
+          <p>5. Pelunasan terlebih dahulu saat hewan dititipkan</p>
+          <p>6. Apabila hewan sakit saat di penitipan, kami akan konfirmasi sebelum kami bawa ke dokter hewan dan biaya menjadi tanggungan pemilik.</p>
+          <p>7. Kami akan melakukan pengecekan buku vaksin dan kondisi hewan terlebih dahulu sebelum dititipkan.</p>
+          <p>8. Hewan yang dititipkan bukan hewan buas dan dilindungi.</p>
+          <h6>Setuju dengan syarat & ketentuan yang berlaku.</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default" >Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
             </form>
             <div id="map" style="display:none"></div>
 					</div>
@@ -153,6 +192,12 @@
 	    	}
 		});
 	});
+
+	// function jarak() {
+	// 	document.getElementById("billing").value = 50000;
+    //       document.getElementById("distance").value = 10 km;
+    // }
+	
 </script>
 
 

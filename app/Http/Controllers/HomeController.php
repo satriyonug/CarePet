@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -114,5 +115,36 @@ class HomeController extends Controller
     public function success()
     {
         return view('success');
+    }
+    public function signup()
+    {
+        return view('sign-up');
+    }
+
+    public function store(Request $request)
+    {
+        $daftar = new User;
+            $daftar->name = $request->name;
+            $daftar->email = $request->email;
+            $daftar->no_telepon = $request->telepon;
+            $daftar->password = md5($request->password);
+            $daftar->tgl_lahir = $request->tgl_lahir;
+            $daftar->alamat = $request->alamat;
+            $daftar->save();
+            return redirect('sign-in');    
+    }
+
+    public function addSession (Request $request) {
+        return $request->session ()->has ('email');
+    }
+
+    public function login(Request $request)
+    {
+        $user = User::where('email',$request->email)->first();
+        if(md5($request->password)==$user->password){
+            $request->session()->put ('email', $user->email);
+            return redirect('/index');
+        }
+
     }
 }

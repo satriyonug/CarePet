@@ -32,7 +32,7 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-3 col-xs-12">
 <div class="appoform-wrapper">
-<form method="POST" action="{{ route('login') }}">
+<form method="POST" action="{{ URL('/masuk') }}">
 @csrf
 <header class="form-header">
 <h3>Sign In Form</h3>
@@ -50,13 +50,15 @@
 </div>
 
 <div class="col-md-6">
-<button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+<button type="submit"  class="btn btn-primary btn-block btn-lg">Sign In</button>
 </div>
 <div class="col-md-6">
-<button type="reset" class="btn btn-success btn-block btn-lg">Sign Up</button>
+<a href="{{ '/sign-up'}}"><button type="button"  class="btn btn-success btn-block btn-lg">Sign Up</button></a>
 </div>
+
 </fieldset>
 </form>
+
 </div>
 </div>
 </div>

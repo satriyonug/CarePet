@@ -195,9 +195,36 @@
                   </form>
                </div> -->
                <div style="text-align: center;">
-                  <button style="" type="submit" class="btn btn-primary">Place an order</button>
+                  <button style="" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Place an order</button>
                </div>
-               
+               <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Syarat & Ketentuan</h4>
+        </div>
+        <div class="modal-body">
+          <h6>Layanan Send Pet dan Pet Care</h6>
+          <p>1. Hewan dalam keadaan sehat</p>
+          <p>2. Hewan tidak kutuan atau sakit kulit (Kalau memang ada, bisa langsung diinfokan dari awal)</p>
+          <p>3. Membawa buku vaksin (Pengecekan vaksin)</p>
+          <p>4. Penitipan dihitung dari hari pertama hewan dititipkan</p>
+          <p>5. Pelunasan terlebih dahulu saat hewan dititipkan</p>
+          <p>6. Apabila hewan sakit saat di penitipan, kami akan konfirmasi sebelum kami bawa ke dokter hewan dan biaya menjadi tanggungan pemilik.</p>
+          <p>7. Kami akan melakukan pengecekan buku vaksin dan kondisi hewan terlebih dahulu sebelum dititipkan.</p>
+          <p>8. Hewan yang dititipkan bukan hewan buas dan dilindungi.</p>
+          <h6>Setuju dengan syarat & ketentuan yang berlaku.</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default" >Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
             </form>
          </div>
       </div>

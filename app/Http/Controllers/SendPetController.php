@@ -48,7 +48,7 @@ class SendPetController extends Controller
             $sendpet->catatan_pengirim = $request->text;
             $sendpet->save();
             //return dd($sendpet);
-            return redirect('success');    
+            return redirect('appointment');    
         }   
     }
 
