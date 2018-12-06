@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\PetShop;
 use Illuminate\Http\Request;
+use App\produk;
 
 class PetShopController extends Controller
 {
@@ -36,25 +37,23 @@ class PetShopController extends Controller
      */
     public function store(Request $request)
     {
-        //
-		$price=20000;
-		$jml_barang= $request->jumlah_barang;
-		$harga = $price*$jml_barang;
-        for ($i=0; $i < $jml_barang ; $i++) { 
+        $produk = produk::where('id', $request->id)->first();
+
 		$petshop = new PetShop;
         $petshop->nama = $request->nama;
+        $petshop->id_barang = $request->id;
+        $petshop->id_user = session()->get('userSession')['id'];
         $petshop->alamat = $request->alamat;
 		$petshop->kota = $request->kota;
 		$petshop->provinsi = $request->provinsi;
 		$petshop->kodepos = $request->kodepos;
 		$petshop->telpon = $request->telpon;
         $petshop->jumlah_barang = $request->jumlah_barang;
-		$petshop->harga = $harga;
+		$petshop->harga = ($request->jumlah_barang)*($produk->harga);
         $petshop->catatan = $request->catatan;
         $petshop->save();
-		}
-		
-		 return redirect('/chart');
+				
+		 return redirect('/chart/1');
     }
 
     /**
@@ -63,9 +62,9 @@ class PetShopController extends Controller
      * @param  \App\PetShop  $petShop
      * @return \Illuminate\Http\Response
      */
-    public function show(PetShop $petShop)
+    public function show(Request $request)
     {
-        //
+
     }
 
     /**

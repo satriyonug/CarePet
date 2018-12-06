@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Session;
 
 class HomeController extends Controller
 {
@@ -147,7 +148,8 @@ class HomeController extends Controller
     {
         $user = User::where('email',$request->email)->first();
         if(md5($request->password)==$user->password){
-            $request->session()->put ('name', $user->name);
+            //$request->session()->push('name', $user);
+            Session::put('userSession', $user);
             return redirect('/index');
         }
 
@@ -155,7 +157,7 @@ class HomeController extends Controller
 
     public function logout(Request $request)
     {
-        $request->session ()->forget ('name');
+        $request->session ()->forget ('userSession');
 
         return redirect('/index');
     }

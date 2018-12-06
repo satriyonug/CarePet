@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\mitra;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class MitraController extends Controller
 {
@@ -14,7 +16,7 @@ class MitraController extends Controller
      */
     public function index()
     {
-        //
+        return view('mitra');
     }
 
     /**
@@ -35,7 +37,7 @@ class MitraController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

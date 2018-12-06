@@ -63,7 +63,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $session = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'no_telepon' => $data['telepon'],
@@ -71,5 +71,7 @@ class RegisterController extends Controller
             'tgl_lahir' => $data['tgl_lahir'],
             'alamat' => $data['alamat'],
         ]);
+
+    return $session;
     }
 }

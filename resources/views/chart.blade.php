@@ -29,9 +29,80 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<form method="post" class="shopform">
+
+@if(str_contains(url()->current(), '/chart/1'))
+
 <div class="table-responsive margin-top">
 <h2 class="text-center">Shopping Chart</h2>
+<table id="cart-table" class="table table-condensed">
+<thead>
+<tr>
+<th>Action</th>
+<th>Image</th>
+<th>Product</th>
+<th>Price</th>
+<th>Quanity</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+@foreach ($produk as $p)
+<tr>
+<th class="product-remove">
+<a class="remove" title="Remove this product" href="#">×</a>
+</th>
+<th>
+<div class="media">
+<div class="relative">
+<a href="{{ url('/shop-detail') }}" title="">
+<img src="{{ URL::asset('petvet/upload/xshop_12.jpg.pagespeed.ic.NS_1sIYAoi.jpg') }}" alt="">
+</a>
+</div>
+</div>
+</th>
+<th>
+<a href="{{ url('/shop-detail') }}">Big Vanillia Color - #000455</a>
+</th>
+<td>$21.00</td>
+<td>
+5
+</td>
+<td>
+$21.00
+</td>
+</tr>
+<tr>
+<th class="product-remove">
+<a class="remove" title="Remove this product" href="#">×</a>
+</th>
+<th>
+<div class="media">
+<div class="relative">
+<a href="{{ url('/shop-detail') }}" title="">
+<img src="{{ URL::asset('petvet/upload/xshop_03.jpg.pagespeed.ic.IONcGIjklL.jpg') }}" alt="">
+</a>
+</div>
+</div>
+</th>
+<th>
+<a href="{{ url('/shop-detail') }}">Custom Color Bluz - #2212344</a>
+</th>
+<td>$21.00</td>
+<td>
+3
+</td>
+<td>
+$21.00
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+@elseif(str_contains(url()->current(), '/chart/2'))
+<form method="post" class="shopform">
+<div class="table-responsive margin-top">
+<h2 class="text-center">Pet Care</h2>
 <table id="cart-table" class="table table-condensed">
 <thead>
 <tr>
@@ -96,10 +167,11 @@ $21.00
 </table>
 </div>
 </form>
+@endif
 <hr class="invis">
 <div class="checkout row">
 <div class="col-md-12 text-center">
-<a href="#" class="btn btn-default">PET SHOP</a> <a href="shop-checkout.html" class="btn btn-primary">PET CARE</a> <a href="categories.html" class="btn btn-default">SEND PET</a>
+<a href="{{'/chart/1'}}" class="btn btn-default" id="1">PET SHOP</a> <a href="{{'/chart/2'}}" id="2" class="btn btn-primary">PET CARE</a> <a href="{{'/chart/3'}}" id="3" class="btn btn-default">SEND PET</a>
 </div>
 </div>
 </div>

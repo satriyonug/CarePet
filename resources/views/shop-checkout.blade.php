@@ -40,6 +40,7 @@
 <label>Nama *</label>
 <input type="text" name="nama" id="nama" class="form-control" placeholder="Name">
 </div>
+<input type="hidden" name="id" id="id" class="form-control" placeholder="Name" value="{{$id}}">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <label>Alamat *</label>
 <input type="text" name="alamat" id="alamat" class="form-control" placeholder="Address">

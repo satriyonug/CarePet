@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\produk;
+use App\PetShop;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+use App\produk;
 
-class ProdukController extends Controller
+class ChartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        //
+        return view('chart');
     }
 
     /**
@@ -37,40 +36,28 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        $imageName = $request->file('gambar');
-        if($imageName!==null)
-        {
-            // get the extension
-            $extension = $imageName->getClientOriginalExtension();
-            Storage::disk('public')->put($imageName->getFilename().'.'.$extension, File::get($imageName));
-        }
-
-        $produk = new produk;
-        $produk->nama = $request->nama;
-        $produk->harga = $request->harga;
-        $produk->gambar = $imageName->getFilename().'.'.$extension;
-        $produk->save();
-        return redirect('/mitra');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\produk  $produk
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(produk $produk)
+    public function show($id)
     {
-        //
+        $produk = produk::where('id_user', session()->get('userSession')['id'])->first();
+        return view('char', ['produk' => $produk]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\produk  $produk
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(produk $produk)
+    public function edit($id)
     {
         //
     }
@@ -79,10 +66,10 @@ class ProdukController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\produk  $produk
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, produk $produk)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -90,10 +77,10 @@ class ProdukController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\produk  $produk
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(produk $produk)
+    public function destroy($id)
     {
         //
     }

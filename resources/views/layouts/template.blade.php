@@ -293,19 +293,22 @@ input[type="radio"] {
 <li><a href="{{ url('/blog') }}">Blog</a></li>
 <li><a href="{{ url('/contact')}}">Contact</a></li>
 <li><a href="{{ url('/about')}}">About</a></li>
-@if (session('name'))
+@if(session()->get('userSession'))
 <li class="dropdown has-submenu">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{session('name')}} <span class="fa fa-angle-down"></span></a>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{session()->get('userSession')['name']}} <span class="fa fa-angle-down"></span></a>
+
 <ul class="dropdown-menu start-left" role="menu">
 
 <li><a href="{{'/sign-out'}}" role="button" aria-expanded="false">Log Out</span></a>
 </ul>
+
 </li>
-<li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
+<li><a class="blogging" title="Add to Cart" href="{{ url('/chart/1') }}"><i class="fa fa-shopping-cart"></i></a></li>
+
 @else
 <li><a href="{{ url('/sign-in')}}">Login</a></li>
-@endif
 
+@endif
 
 </ul>
 </div>
