@@ -47,9 +47,9 @@ class HomeController extends Controller
         return view('shop-checkout',compact('id'));
     }
 	
-    public function shopchart()
+    public function chart()
     {
-        return view('shop-chart');
+        return view('chart');
     }
 
     public function vets()
@@ -121,6 +121,11 @@ class HomeController extends Controller
         return view('sign-up');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
     public function store(Request $request)
     {
         $daftar = new User;
@@ -135,16 +140,23 @@ class HomeController extends Controller
     }
 
     public function addSession (Request $request) {
-        return $request->session ()->has ('email');
+        return $request->session ()->has ('name');
     }
 
     public function login(Request $request)
     {
         $user = User::where('email',$request->email)->first();
         if(md5($request->password)==$user->password){
-            $request->session()->put ('email', $user->email);
+            $request->session()->put ('name', $user->name);
             return redirect('/index');
         }
 
+    }
+
+    public function logout(Request $request)
+    {
+        $request->session ()->forget ('name');
+
+        return redirect('/index');
     }
 }

@@ -54,7 +54,7 @@ class PetShopController extends Controller
         $petshop->save();
 		}
 		
-		 return redirect('index');
+		 return redirect('/chart');
     }
 
     /**

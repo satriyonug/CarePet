@@ -232,16 +232,18 @@ input[type="radio"] {
 <div class="navbar-cell">
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown has-submenu">
-<a href="{{ url('/index')}}" class="dropdown-toggle" role="button" aria-expanded="false">Home</a>
+<!-- <a href="{{ url('/index')}}" class="dropdown-toggle" role="button" aria-expanded="false">Home</a> -->
 
 </li>
-<li><a href="{{ url('vets')}}">Our Vets</a></li>
+<!-- <li><a href="{{ url('vets')}}">Our Vets</a></li> -->
 <li class="dropdown has-submenu">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="fa fa-angle-down"></span></a>
 <ul class="dropdown-menu start-left" role="menu">
 <li><a href="{{ url('/service') }}">Our Services</a></li>
+<li><a href="{{ url('/shop') }}">Pet Shop</a></li>
+<li><a href="{{ url('/petcare') }}">Pet Care</a></li>
 
-<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Shop <span class="fa fa-angle-right"></span></a>
+<!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pet Shop <span class="fa fa-angle-right"></span></a>
 <ul class="dropdown-menu show-left" role="menu">
 <li><a href="{{ url('/shop') }}">Shop Page</a></li>
 <li><a href="{{ url('/shop-detail') }}">Shop Detail</a></li>
@@ -257,7 +259,7 @@ input[type="radio"] {
 <li><a href="{{ url('/petcare-checkout') }}">Pet Care Checkout</a></li>
 <li><a href="{{ url('/petcare-chart') }}">Pet Care Cart</a></li>
 </ul>
-</li>
+</li> -->
 
 <li><a href="{{ url('/appointment') }}">Send Pet</a></li>
 <li><a href="{{ url('/vets') }}">Vet Consultation</a></li>
@@ -266,7 +268,7 @@ input[type="radio"] {
 </ul>
 </li>
 
-<li class="dropdown has-submenu">
+<!-- <li class="dropdown has-submenu">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pets <span class="fa fa-angle-down"></span></a>
 <ul class="dropdown-menu start-left" role="menu">
 
@@ -277,25 +279,33 @@ input[type="radio"] {
 <li><a href="{{ url('/petcare-checkout') }}">Pet Care Checkout</a></li>
 <li><a href="{{ url('/petcare-chart') }}">Pet Care Cart</a></li>
 </ul>
+</li> -->
+
+<!-- <li><a href="{{ url('/appointment') }}">Send Pet</a></li> -->
+
+
+
+
+
+<!-- </ul>
 </li>
-
-<li><a href="{{ url('/appointment') }}">Send Pet</a></li>
-
-
-
-
-
-</ul>
-</li>
-<li><a href="{{ url('/shop') }}">Shop</a></li>
+<li><a href="{{ url('/shop') }}">Shop</a></li> -->
 <li><a href="{{ url('/blog') }}">Blog</a></li>
 <li><a href="{{ url('/contact')}}">Contact</a></li>
-@if (session('email'))
-<li>Satriyo</li>
+<li><a href="{{ url('/about')}}">About</a></li>
+@if (session('name'))
+<li class="dropdown has-submenu">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{session('name')}} <span class="fa fa-angle-down"></span></a>
+<ul class="dropdown-menu start-left" role="menu">
+
+<li><a href="{{'/sign-out'}}" role="button" aria-expanded="false">Log Out</span></a>
+</ul>
+</li>
+<li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
 @else
 <li><a href="{{ url('/sign-in')}}">Login</a></li>
 @endif
-<li><a class="blogging" title="Add to Cart" href="{{ url('/shop-chart') }}"><i class="fa fa-shopping-cart"></i></a></li>
+
 
 </ul>
 </div>
@@ -351,13 +361,10 @@ input[type="radio"] {
 <h4>Useful Links</h4>
 </div>
 <ul>
-<li><a href="index.html">Default Version</a></li>
-<li><a href="index-alt.html">Home Alternative</a></li>
-<li><a href="index-boxed.html">Boxed Version</a></li>
-<li><a href="{{ url('/vets')}}">Our Vets</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="services.html">Our Services</a></li>
-<li><a href="contact.html">Get In Touch</a></li>
+<li><a href="{{'/index'}}">Home</a></li>
+<li><a href="{{'/about'}}">About Us</a></li>
+<li><a href="{{'/service'}}">Our Services</a></li>
+
 </ul>
 </div>
 </div>
@@ -371,11 +378,7 @@ input[type="radio"] {
 <p>© 2015 PetVet Pty Ltd. by <a href="#">Template Visual</a></p>
 </div>
 <div class="col-md-6 text-right">
-<ul class="list-inline">
-<li><a href="#">Terms of Usage</a></li>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Sitemap</a></li>
-</ul>
+
 </div>
 </div>
 </div>

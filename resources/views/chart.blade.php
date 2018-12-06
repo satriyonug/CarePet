@@ -5,11 +5,11 @@
 <div class="page-title grey">
 <div class="container">
 <div class="title-area pull-left">
-<h2>Shopping Cart <small>Please complete your order.</small></h2>
+<h2>Transaction Chart</h2>
 <div class="bread">
 <ol class="breadcrumb">
 <li><a href="#">Home</a></li>
-<li class="active">Cart</li>
+<li class="active">Chart</li>
 </ol>
 </div>
 </div>
@@ -31,6 +31,7 @@
 <div class="col-md-12">
 <form method="post" class="shopform">
 <div class="table-responsive margin-top">
+<h2 class="text-center">Shopping Chart</h2>
 <table id="cart-table" class="table table-condensed">
 <thead>
 <tr>
@@ -98,7 +99,7 @@ $21.00
 <hr class="invis">
 <div class="checkout row">
 <div class="col-md-12 text-center">
-<a href="#" class="btn btn-default">UPDATE CART</a> <a href="shop-checkout.html" class="btn btn-primary">PROCEED TO CHECKOUT</a> <a href="categories.html" class="btn btn-default">CONTINUE SHOP</a>
+<a href="#" class="btn btn-default">PET SHOP</a> <a href="shop-checkout.html" class="btn btn-primary">PET CARE</a> <a href="categories.html" class="btn btn-default">SEND PET</a>
 </div>
 </div>
 </div>
