@@ -15,6 +15,8 @@ class CreatePetCaresTable extends Migration
     {
         Schema::create('pet_cares', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_mitra')->nullable();
+            $table->integer('id_user')->nullable();
             $table->string('nama',100)->nullable();
             $table->string('telpon',20)->nullable();
             $table->string('alamat',100)->nullable();

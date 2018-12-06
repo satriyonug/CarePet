@@ -15,6 +15,8 @@ class CreatePetShopsTable extends Migration
     {
         Schema::create('pet_shops', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_barang')->nullable();
+            $table->integer('id_user')->nullable();
             $table->string('nama',100)->nullable();
             $table->string('alamat',100)->nullable();
             $table->string('kota',100)->nullable();
