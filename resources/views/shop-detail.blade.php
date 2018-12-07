@@ -260,7 +260,7 @@ Masih banyak pilihan warna/motif…</p>
 Nah salah satu cara untuk membuatnya tidak merasa bosan adalah dengan memilih Tempat Tidur Kucing tingkat seperti tempat bermainnya. Selain untuk di rumah, tempat tidur kucing ini.
 Tempatmenarik memiliki nilai seni buat peliharaan kesayangan Bahan tanah liat.</p>
 
-<a href="{{ url('/shop-checkout/1') }}" class="btn btn-primary">Add to Cart</a>
+<a href="{{ url('/shop-checkout/2') }}" class="btn btn-primary">Add to Cart</a>
 <div class="addwish">
 <a href="shop-wishlist.html"><i class="fa fa-heart-o"></i> Add to Wishlist</a>
 </div>

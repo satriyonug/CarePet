@@ -46,55 +46,26 @@
 </tr>
 </thead>
 <tbody>
-@foreach ($produk as $p)
+@foreach ($transaksi as $t)
 <tr>
-<th class="product-remove">
-<a class="remove" title="Remove this product" href="#">×</a>
-</th>
-<th>
-<div class="media">
-<div class="relative">
-<a href="{{ url('/shop-detail') }}" title="">
-<img src="{{ URL::asset('petvet/upload/xshop_12.jpg.pagespeed.ic.NS_1sIYAoi.jpg') }}" alt="">
-</a>
-</div>
-</div>
-</th>
-<th>
-<a href="{{ url('/shop-detail') }}">Big Vanillia Color - #000455</a>
-</th>
-<td>$21.00</td>
-<td>
-5
-</td>
-<td>
-$21.00
-</td>
+    <th class="product-remove">
+        <a class="remove" title="Remove this product" href="#">×</a>
+    </th>
+    <th>
+        <div class="media">
+            <div class="relative">
+            <img src="{{ URL::asset('produk/' . $t->gambar) }}" alt="{{$t->gambar}}" />
+            </div>
+        </div>
+    </th>
+    <th>
+        {{$t->nama}}
+    </th>
+    <td>{{$t->harga}}</td>
+    <td>{{$t->jumlah_barang}}</td>
+    <td>{{$t->harga * $t->jumlah_barang}}</td>
 </tr>
-<tr>
-<th class="product-remove">
-<a class="remove" title="Remove this product" href="#">×</a>
-</th>
-<th>
-<div class="media">
-<div class="relative">
-<a href="{{ url('/shop-detail') }}" title="">
-<img src="{{ URL::asset('petvet/upload/xshop_03.jpg.pagespeed.ic.IONcGIjklL.jpg') }}" alt="">
-</a>
-</div>
-</div>
-</th>
-<th>
-<a href="{{ url('/shop-detail') }}">Custom Color Bluz - #2212344</a>
-</th>
-<td>$21.00</td>
-<td>
-3
-</td>
-<td>
-$21.00
-</td>
-</tr>
+@endforeach
 </tbody>
 </table>
 </div>

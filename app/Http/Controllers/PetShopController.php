@@ -37,6 +37,7 @@ class PetShopController extends Controller
      */
     public function store(Request $request)
     {
+
         $produk = produk::where('id', $request->id)->first();
 
 		$petshop = new PetShop;

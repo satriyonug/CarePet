@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\PetShop;
 use Illuminate\Http\Request;
 use App\produk;
+use Illuminate\Support\Facades\DB;
 
 class ChartController extends Controller
 {
@@ -15,7 +16,12 @@ class ChartController extends Controller
      */
     public function index()
     {
-        return view('chart');
+        
+        $transaksi = PetShop::select('*')->join('produks','produks.id','=','pet_shops.id_barang' )->where('id_user', session()->get('userSession')['id'])->get();
+        
+        return view('chart', ['transaksi' => $transaksi]);
+        // return view('chart', ['transaksi' => $transaksi]);
+
     }
 
     /**
@@ -47,8 +53,7 @@ class ChartController extends Controller
      */
     public function show($id)
     {
-        $produk = produk::where('id_user', session()->get('userSession')['id'])->first();
-        return view('char', ['produk' => $produk]);
+        
     }
 
     /**
