@@ -41,6 +41,7 @@
                            <label>Name *</label>
                            <input type="text" name="name" id="name" class="form-control" placeholder="Name">
                         </div>
+                        <input type="hidden" name="id_mitra" id="id_mitra" class="form-control" placeholder="Name" value="{{$id}}">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                            <label>Address *</label>
                            <input type="text" name="alamat" id="alamat" class="form-control" placeholder="Address">

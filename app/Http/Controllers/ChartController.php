@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\PetShop;
+use App\PetCare;
+use App\mitra;
 use Illuminate\Http\Request;
 use App\produk;
 use Illuminate\Support\Facades\DB;
@@ -17,9 +19,22 @@ class ChartController extends Controller
     public function index()
     {
         
-        $transaksi = PetShop::select('*')->join('produks','produks.id','=','pet_shops.id_barang' )->where('id_user', session()->get('userSession')['id'])->get();
-        
+        $transaksi = PetShop::select('*')->join('produks','produks.id_produk','=','pet_shops.id_barang' )->where('id_user', session()->get('userSession')['id'])->get();
+        // dd($transaksi);
         return view('chart', ['transaksi' => $transaksi]);
+
+        // return view('chart', ['transaksi' => $transaksi]);
+
+    }
+
+    public function index_care()
+    {
+        
+        $transaksi_care = PetCare::select('*')->join('mitras','mitras.id_mitra','=','pet_cares.id_mitra')
+        ->where('id_user', session()->get('userSession')['id'])->get();
+        // dd($transaksi_care);
+        return view('chart', ['transaksi_care' => $transaksi_care]);
+
         // return view('chart', ['transaksi' => $transaksi]);
 
     }
@@ -85,8 +100,20 @@ class ChartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $produk = PetShop::where('id', $request->id)->first();
+        
+        $produk->delete();
+        return redirect('/chart/1')->with('info','Transaksi berhasil dihapus');
+    }
+
+    public function destroy_care(Request $request)
+    {
+        
+        $produk = PetCare::where('id', $request->id)->first();
+        
+        $produk->delete();
+        return redirect('/chart/2')->with('info','Transaksi berhasil dihapus');
     }
 }

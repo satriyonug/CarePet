@@ -52,6 +52,8 @@ class PetCareController extends Controller
         $hrg = $price*$durasi*$jml_binatang;
         for ($i=0; $i < $jml_binatang ; $i++) { 
             $petcare = new PetCare;
+            $petcare->id_mitra = 1;
+            $petcare->id_user = session()->get('userSession')['id'];
             $petcare->nama = $request->name;
             $petcare->telpon = $request->telpon;
             $petcare->alamat = $request->alamat;
@@ -59,6 +61,7 @@ class PetCareController extends Controller
             $petcare->lama_penitipan = $request->lama_penitipan;
             $petcare->catatan = $request->catatan;
             $petcare->harga = $hrg;
+            
             $petcare->save();   
         }
         $order = array('price' => $price, 'durasi' => $durasi, 'jml' => $jml_binatang, 'harga' => $hrg);

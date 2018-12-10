@@ -43,6 +43,32 @@
       width: auto; display:inline; 
     } 
   </style>
+  <script type="text/javascript">
+// var totalshop = 0;
+
+// $("#chart-shop-table tr").not(':first').not(':last').each(function() {
+//   totalshop +=  getnum($(this).find("td:eq(5)").text());
+//   function getnum(t){
+//     if(isNumeric(t)){
+//         return parseInt(t,10);
+//     }
+//     return 0;
+//     function isNumeric(n) {
+//         return !isNaN(parseFloat(n)) && isFinite(n);
+//     }
+//   }
+// });
+// $("#totalshop").text(totalshop);
+var table = document.getElementById("chart-shop-table"), sumVal = 0;
+            
+for(var i = 1; i < table.rows.length; i++)
+{
+    sumVal = sumVal + parseInt(table.rows[i].cells[5].innerHTML);
+}
+
+document.getElementById("totalshop").innerHTML = sumVal;
+console.log(sumVal);
+</script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
@@ -89,10 +115,10 @@
       }, callback);
     }
 
-    function jarak() {
-		      document.getElementById("billing").value = 50000;
-          document.getElementById("distance").value = 10 km;
-    }
+    // function jarak() {
+		//       document.getElementById("billing").value = 50000;
+    //       document.getElementById("distance").value = 10 km;
+    // }
       
     // responde dari Googlemaps Distance Matrix akan diolah dan di kirim ke output HTML
     function callback(response, status) {

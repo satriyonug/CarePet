@@ -92,7 +92,7 @@
 									<input id="destinations" name="destinations" type="text" placeholder="Destination" class="form-control" required>
 								</div>
                 
-								<!-- <div class="input-field col s6">
+								<div class="input-field col s6">
 									<a class="btn btn-success" onclick="return calculateDistances()">Check Price</a>
 								</div>
 
@@ -104,7 +104,7 @@
 								<div class="col-md-6" >
 									<label class="sr-only">Tarif</label>
 									<input id="billing" name="billing" type="text" placeholder="Price" class="form-control" value="">
-								</div> -->
+								</div>
 
 								<div class="col-md-12">
 									<textarea id="text" name="text" placeholder="Add extra notes" class="form-control"></textarea>
@@ -114,10 +114,12 @@
 								</div>
               </fieldset>
 
+
 			  <div class="modal fade" id="modalku" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
+			
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>

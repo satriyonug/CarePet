@@ -1,3 +1,4 @@
+
 @extends('layouts.template')
 
 @section('maincontent')
@@ -34,7 +35,7 @@
 
 <div class="table-responsive margin-top">
 <h2 class="text-center">Shopping Chart</h2>
-<table id="cart-table" class="table table-condensed">
+<table border=1 id="chart-shop-table" class="table table-condensed">
 <thead>
 <tr>
 <th>Action</th>
@@ -46,10 +47,17 @@
 </tr>
 </thead>
 <tbody>
+
 @foreach ($transaksi as $t)
 <tr>
     <th class="product-remove">
-        <a class="remove" title="Remove this product" href="#">×</a>
+        <a class="btn btn-danger" style="padding:0px;">
+            <form action="/chart/delete" method="POST">
+            {{csrf_field()}}
+            <input name="id" type="hidden" value="{{$t->id}}">
+            <button type="submit" class="btn btn-danger btn-block"><strong>X</strong></button>
+            </form>
+        </a>
     </th>
     <th>
         <div class="media">
@@ -63,81 +71,185 @@
     </th>
     <td>{{$t->harga}}</td>
     <td>{{$t->jumlah_barang}}</td>
-    <td>{{$t->harga * $t->jumlah_barang}}</td>
+    <td id="harga">{{$t->harga * $t->jumlah_barang}}</td>
+    
 </tr>
 @endforeach
+
+    <th class="product-remove"></th>
+    <th></th>
+    <th>
+    </th>
+    <td style="display:none">    
+    <?php
+        $a=0;
+    ?> 
+    @foreach ($transaksi as $t)
+    {{$a += $t->harga * $t->jumlah_barang}}
+    @endforeach
+    </td>
+    <td></td>
+    <td>Total Harga</td>
+    <td id="totalshop">
+    
+
+    {{$a}}
+    </td>
 </tbody>
+
 </table>
+
+<div style="text-align: right; padding-right:50px;">
+<br>
+    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Chechkout</button>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Transaksi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Total harga     :   {{$a}}</strong></h6>
+        <h6>Silahkan transfer ke rekening BNI</h6>
+        <table class="table table-condensed">
+        <tbody>
+        <tr>
+            <td>Atas Nama</td>
+            <td>CarePet</td>
+        </tr>
+        <tr>
+            <td>No Rekening</td>
+            <td>0123456789</td>
+        </tr>
+        </tbody>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 @elseif(str_contains(url()->current(), '/chart/2'))
-<form method="post" class="shopform">
+
 <div class="table-responsive margin-top">
 <h2 class="text-center">Pet Care</h2>
 <table id="cart-table" class="table table-condensed">
 <thead>
 <tr>
 <th>Action</th>
-<th>Image</th>
-<th>Product</th>
+<th>Photo</th>
+<th>Name</th>
+<th>Animal</th>
 <th>Price</th>
-<th>Quanity</th>
-<th>Total</th>
+<th>Duration</th>
+<th>Total Price</th>
 </tr>
 </thead>
 <tbody>
+@foreach ($transaksi_care as $tc)
 <tr>
-<th class="product-remove">
-<a class="remove" title="Remove this product" href="#">×</a>
-</th>
-<th>
-<div class="media">
-<div class="relative">
-<a href="{{ url('/shop-detail') }}" title="">
-<img src="{{ URL::asset('petvet/upload/xshop_12.jpg.pagespeed.ic.NS_1sIYAoi.jpg') }}" alt="">
-</a>
-</div>
-</div>
-</th>
-<th>
-<a href="{{ url('/shop-detail') }}">Big Vanillia Color - #000455</a>
-</th>
-<td>$21.00</td>
-<td>
-5
-</td>
-<td>
-$21.00
-</td>
+    <th class="product-remove">
+        <a class="btn btn-danger" style="padding:0px;">
+            <form action="/chart_care/delete" method="POST">
+            {{csrf_field()}}
+            <input name="id" type="hidden" value="{{$tc->id}}">
+            <button type="submit" class="btn btn-danger btn-block"><strong>X</strong></button>
+            </form>
+        </a>
+    </th>
+    <th>
+        <div class="media">
+            <div class="relative">
+            <img src="{{ URL::asset('produk/' . $tc->gambar) }}" alt="{{$tc->gambar}}" />
+            </div>
+        </div>
+    </th>
+    <th>
+        {{$tc->nama}}
+    </th>
+    <th>
+        {{$tc->jenis_binatang}}
+    </th>
+    <td>{{$tc->harga / $tc->lama_penitipan}}</td>
+    <td>{{$tc->lama_penitipan}}</td>
+    <td id="harga">{{$tc->harga}}</td>
+    
 </tr>
-<tr>
-<th class="product-remove">
-<a class="remove" title="Remove this product" href="#">×</a>
-</th>
-<th>
-<div class="media">
-<div class="relative">
-<a href="{{ url('/shop-detail') }}" title="">
-<img src="{{ URL::asset('petvet/upload/xshop_03.jpg.pagespeed.ic.IONcGIjklL.jpg') }}" alt="">
-</a>
-</div>
-</div>
-</th>
-<th>
-<a href="{{ url('/shop-detail') }}">Custom Color Bluz - #2212344</a>
-</th>
-<td>$21.00</td>
-<td>
-3
-</td>
-<td>
-$21.00
-</td>
-</tr>
+@endforeach
+
+    <th class="product-remove"></th>
+    <th></th>
+    <th>
+    </th>
+    <th>
+    </th>
+    <td style="display:none">    
+    <?php
+        $a=0;
+    ?> 
+    @foreach ($transaksi_care as $tc)
+    {{$a += $tc->harga}}
+    @endforeach
+    </td>
+    <td></td>
+    <td>Total Harga</td>
+    <td id="totalshop">
+    
+
+    {{$a}}
+    </td>
 </tbody>
+
 </table>
+
+<div style="text-align: right; padding-right:50px;">
+<br>
+    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Chechkout</button>
+</div></div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Transaksi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Total harga     :   {{$a}}</strong></h6>
+        <h6>Silahkan transfer ke rekening BNI</h6>
+        <table class="table table-condensed">
+        <tbody>
+        <tr>
+            <td>Atas Nama</td>
+            <td>CarePet</td>
+        </tr>
+        <tr>
+            <td>No Rekening</td>
+            <td>0123456789</td>
+        </tr>
+        </tbody>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
 </div>
-</form>
+</div>
+
 @endif
 <hr class="invis">
 <div class="checkout row">
@@ -151,3 +263,4 @@ $21.00
 </section>
 
 @endsection
+

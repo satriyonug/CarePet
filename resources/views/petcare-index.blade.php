@@ -62,7 +62,7 @@
 <i class="fa fa-star"></i>
 </div>
 </div>
-<div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
+<!-- <div class="col-md-3 col-sm-6 wdtShop grid cs-style-3">
 <div class="img-wrap">
 <figure>
 <img alt="" src="{{ URL::asset('petvet/upload/moeza.jpg') }}" class="img-responsive">
@@ -121,7 +121,7 @@
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
 </div>
-</div>
+</div> -->
 
 
 </div>

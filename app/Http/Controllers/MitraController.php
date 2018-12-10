@@ -19,6 +19,11 @@ class MitraController extends Controller
         return view('mitra');
     }
 
+    public function index_care()
+    {
+        return view('mitra_care');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +42,19 @@ class MitraController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $imageName = $request->file('gambar');
+        if($imageName!==null)
+        {
+            // get the extension
+            $extension = $imageName->getClientOriginalExtension();
+            Storage::disk('public')->put($imageName->getFilename().'.'.$extension, File::get($imageName));
+        }
+
+        $produk = new mitra;
+        $produk->nama = $request->nama;
+        $produk->gambar = $imageName->getFilename().'.'.$extension;
+        $produk->save();
+        return redirect('/mitra_care');
     }
 
     /**
